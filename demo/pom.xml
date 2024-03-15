@@ -33,6 +33,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>3.2.1</version> <!-- Versión específica de JPA -->
+		</dependency>
 	</dependencies>
 
 	<build>
