@@ -3,24 +3,34 @@ package funflex.demo.Models.Entity;
 import java.io.Serializable;
  
 
+@package packageName;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 @Entity
 @Table("Customer")
+class Customer implements Serializable {
 
-
-public class Customer implements Serializable {
-     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Long Id;
 
     private String Name,Email,Direction,TelephoneContact;
 
-    public Long getId() {
-        return Id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private entityIdType id;
+
+    public Customer() {
     }
 
-    public void setId(Long id) {
-        Id = id;
+    public entityIdType getId() {
+        return id;
+    }
+
+    public void setId(entityIdType id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -54,8 +64,6 @@ public class Customer implements Serializable {
     public void setTelephoneContact(String telephoneContact) {
         TelephoneContact = telephoneContact;
     }
-
-    
 
 
 
