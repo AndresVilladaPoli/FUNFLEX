@@ -1,75 +1,74 @@
-package funflex.demo.Models.Entity;
- 
-@package packageAdmin;
 
+package funflex.demo.Models.Entity;
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
-@Table("Admin")
+import jakarta.persistence.Table;
+
+@jakarta.persistence.Entity
+@Table(name = "Admin")
 public class Admin implements Serializable {
 
 
     private String AdminName,AdminEmail,AdminTelephone,DocumentType,DocumentNumber;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @jakarta.persistence.Id
+    @jakarta.persistence.GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long IdAdmin;
 
     public Admin() {
     }
 
-    public Long getIdAdmin() {
-        return idAdmin;
-    }
-
-    public void setIdAdmin(Long idAdmin) {
-        this.idAdmin = idAdmin;
-    }
-
     public String getAdminName() {
-        return adminName;
+        return AdminName;
     }
 
     public void setAdminName(String adminName) {
-        this.adminName = adminName;
+        AdminName = adminName;
     }
 
     public String getAdminEmail() {
-        return adminEmail;
+        return AdminEmail;
     }
 
     public void setAdminEmail(String adminEmail) {
-        this.adminEmail = adminEmail;
+        AdminEmail = adminEmail;
     }
 
     public String getAdminTelephone() {
-        return adminTelephone;
+        return AdminTelephone;
     }
 
     public void setAdminTelephone(String adminTelephone) {
-        this.adminTelephone = adminTelephone;
+        AdminTelephone = adminTelephone;
     }
 
     public String getDocumentType() {
-        return documentType;
+        return DocumentType;
     }
 
     public void setDocumentType(String documentType) {
-        this.documentType = documentType;
+        DocumentType = documentType;
     }
 
     public String getDocumentNumber() {
-        return documentNumber;
+        return DocumentNumber;
     }
 
     public void setDocumentNumber(String documentNumber) {
-        this.documentNumber = documentNumber;
+        DocumentNumber = documentNumber;
     }
+
+    public Long getIdAdmin() {
+        return IdAdmin;
+    }
+
+    public void setIdAdmin(Long idAdmin) {
+        IdAdmin = idAdmin;
+    }
+
+    
+
 }
     
     

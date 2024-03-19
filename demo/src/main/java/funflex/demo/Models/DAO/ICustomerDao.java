@@ -1,3 +1,5 @@
+package funflex.demo.Models.DAO;
+
 import java.util.List;
 
 import funflex.demo.Models.Entity.Customer;

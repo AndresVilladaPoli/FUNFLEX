@@ -1,14 +1,27 @@
+package funflex.demo.Models.DAO;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import funflex.demo.Models.Entity.Admin;
+import funflex.demo.Models.Entity.Customer;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
+
+
 
 @Repository
 
-public Class CustomerDaoImp implements ICustomerDao{
+public class CustomerDaoImp implements ICustomerDao{
 
     @PersistenceContext
     
     private EntityManager em;
 
     @SuppressWarnings("unchecked")
-    @Transactional(readOnly = true)
+   // @Transactional(readOnly = true)
     @Override
     public List<Customer> findAll() 
     { 
@@ -16,7 +29,7 @@ public Class CustomerDaoImp implements ICustomerDao{
     }
 
     @Override
-    @Transactional
+  //  @Transactional
     public void save(Customer customer)
     {
         if(customer.getId() != null && customer.getId() > 0)
@@ -32,7 +45,7 @@ public Class CustomerDaoImp implements ICustomerDao{
 
 
     @Override
-    @Transactional(readOnly = true)
+   // @Transactional(readOnly = true)
     public Customer findOne(Long Id) {
 
 
@@ -43,7 +56,7 @@ public Class CustomerDaoImp implements ICustomerDao{
 
 
     @Override
-    @Transactional
+  //  @Transactional
     public void delete(Long Id) {
       
       Customer customer = findOne(Id);

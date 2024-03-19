@@ -1,14 +1,23 @@
+package funflex.demo.Models.DAO;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import funflex.demo.Models.Entity.Admin;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 @Repository
 
-public Class AdminDaoImp implements IAdminDao{
+public class AdminDaoImp implements IAdminDao{
 
     @PersistenceContext
     
     private EntityManager em;
 
     @SuppressWarnings("unchecked")
-    @Transactional(readOnly = true)
+   // @Transactional(readOnly = true)
     @Override
     public List<Admin> findAll() 
     { 
@@ -16,7 +25,7 @@ public Class AdminDaoImp implements IAdminDao{
     }
 
     @Override
-    @Transactional
+   // @Transactional
     public void save(Admin admin)
     {
         if(admin.getIdAdmin() != null && admin.getIdAdmin() > 0)
@@ -32,7 +41,7 @@ public Class AdminDaoImp implements IAdminDao{
 
 
     @Override
-    @Transactional(readOnly = true)
+   // @Transactional(readOnly = true)
     public Admin findOne(Long IdAdmin) {
 
 
@@ -42,12 +51,12 @@ public Class AdminDaoImp implements IAdminDao{
     }
 
     @Override
-    @Transactional
+   // @Transactional
     public void delete(Long IdAdmin) {
       
       Admin admin = findOne(IdAdmin);
 
-      em.remove(Admin);
+      em.remove(admin);
 
     }
 

@@ -1,18 +1,17 @@
 package funflex.demo.Models.Entity;
 
 import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
  
-
-@package packageCustomer;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 
 @Entity
-@Table("Customer")
+@Table(name = "Customer")
 public class Customer implements Serializable {
 
 
