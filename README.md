@@ -30,11 +30,6 @@ FUN FLEX is an E-Commerce project specialized in the sale of digital entertainme
 ![Image text](README_IMG/Schema.png)
 
 
-![Image text](README_IMG/visual.png)
-
-- Tambien necesitaremos la extension de live server para ejecutar el frontend
-
-![Image text](README_IMG/live.png)
 
 
 
