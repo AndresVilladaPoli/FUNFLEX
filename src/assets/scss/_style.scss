@@ -1,0 +1,147 @@
+
+.main-page-wrapper {
+  overflow-x: hidden;
+}
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  color: var(--heading);
+  font-weight: normal;
+}
+.h1,
+h1 {
+  font-size: 100px;
+}
+.h2,
+h2 {
+  font-size: 52px;
+}
+.h3,
+h3 {
+  font-size: 36px;
+}
+.h4,
+h4 {
+  font-size: 24px;
+  font-family: "gorditamedium";
+}
+.h5,
+h5 {
+  font-size: 20px;
+}
+.h6,
+h6 {
+  font-size: 15px;
+}
+
+.theme-main-menu {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 65px;
+  transition: all 0.4s ease-out;
+}
+.theme-main-menu.sticky-menu.fixed {
+  z-index: 990;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #fff;
+  box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.1);
+}
+.theme-main-menu .inner-content {
+  position: relative;
+}
+
+.theme-main-menu.sticky-menu.fixed.white-vr,
+.theme-main-menu.sticky-menu.fixed.dark-bg {
+  background: #191919;
+}
+.theme-main-menu .logo-xl {
+  width: 203px;
+}
+.theme-menu-one .right-widget .login-btn {
+  margin-right: 60px;
+}
+.theme-menu-one .right-widget .login-btn span {
+  font-family: "gorditamedium";
+  margin: 0 0 0 12px;
+  transition: all 0.3s ease-in-out;
+  color: var(--heading);
+}
+.theme-menu-one .right-widget .login-btn:hover span {
+  text-decoration: underline;
+}
+.vcamp-footer-two{
+  background-color: black;
+}
+
+
+.vcamp-footer-two .bottom-footer {
+  border-top: 1px solid white;
+  padding: 35px 0 0;
+  margin-top: 45px;
+}
+.vcamp-footer-two .bottom-footer .footer-nav a {
+  font-family: "gorditamedium";
+  font-size: 16px;
+  color: white;
+  margin-right: 25px;
+}
+.vcamp-footer-two .bottom-footer .footer-nav a:hover {
+  text-decoration: underline;
+}
+.vcamp-footer-two .bottom-footer .copyright {
+  font-size: 16px;
+  color: white;
+}
+
+.hero-banner-six {
+  position: relative;
+  z-index: 5;
+  margin-top: 135px;
+  background: radial-gradient(53.3% 53.3% at 50% 46.7%, #feffff 0%, #e4efef 100%);
+}
+
+.hero-banner-six .product-text h2 {
+  font-size: 140px;
+  font-weight: 500;
+  line-height: 0.92em;
+  padding: 20px 0 30px;
+  transition: all 0.8s ease-in-out;
+}
+
+.hero-banner-six .product-text {
+  padding: 150px 0;
+}
+.hero-banner-six .product-text *,
+.hero-banner-six .product-img {
+  transform: translateY(50px);
+}
+.hero-banner-six .slick-active .product-text *,
+.hero-banner-six .slick-active .product-img {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
