@@ -32,7 +32,7 @@ const MegaMenuOne = () => {
           data-bs-auto-close="outside"
           aria-expanded="false"
         >
-          <Link to={"/"}>Products</Link>
+          <Link to={"/products"}>Products</Link>
           
         </button>
         
