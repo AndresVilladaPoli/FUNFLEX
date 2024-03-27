@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MegaMenuOne from "../common/header/mega-menu/MegaMenuOne";
-// ESTE ES EL PRINCIPAL
 const Header = ({ className = "" }) => {
   const [navbar, setNavbar] = useState(false);
 
@@ -54,7 +53,20 @@ const Header = ({ className = "" }) => {
           </nav>
 
           <div className="right-widget d-flex align-items-center">
+          <div className="cart">
+              
+              <Link
+                to="/"
+                className="d-flex "
+              >
+                <img
+                  src={require("../../assets/images/icon/icon_02.svg").default}
+                  alt="icon"
+                />
+              </Link>
+            </div>
             <div className="d-none d-sm-block">
+              
               <Link
                 to="/"
                 className="d-flex align-items-center login-btn"
@@ -64,6 +76,20 @@ const Header = ({ className = "" }) => {
                   alt="icon"
                 />
                 <span>login</span>
+              </Link>
+            </div>
+            <div className="login-btn">
+              
+              <Link
+                to="/"
+                className="d-flex "
+              >
+                <img
+                  src={require("../../assets/images/icon/icon_03.svg").default}
+                  alt="icon"
+                />
+                <span>SignUp</span>
+
               </Link>
             </div>
 

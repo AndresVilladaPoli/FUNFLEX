@@ -1,0 +1,40 @@
+.theme-main-menu .navbar .navbar-nav .nav-link {
+    @media (max-width: 991px) {
+        width: 100%;
+        text-align: left;
+    }
+}
+.navbar-toggler {
+    border: none;
+}
+a {
+    transition: 0.3s;
+}
+
+
+.z-index-auto {
+    z-index: auto;
+}
+
+
+
+.cart-group-wrapper .dropdown-toggle {
+    margin-right: 0;
+    &::before {
+        display: none;
+    }
+}
+.page-link {
+    cursor: pointer;
+}
+
+.shop-filter-one .form-select {
+    padding: 12px 20px;
+    font-size: 15px;
+    border: 1px solid #e1e1e1;
+    min-width: 180px;
+    cursor: pointer;
+    &:focus {
+        box-shadow: none;
+    }
+}

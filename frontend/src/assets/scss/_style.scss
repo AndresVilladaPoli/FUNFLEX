@@ -108,21 +108,22 @@ h6 {
 
 .hero-banner-six {
   position: relative;
-  z-index: 5;
+  // z-index: 1;
   margin-top: 135px;
-  background: radial-gradient(53.3% 53.3% at 50% 46.7%, #feffff 0%, #e4efef 100%);
-}
+  background-color: #AFCFE1;}
 
 .hero-banner-six .product-text h2 {
-  font-size: 140px;
-  font-weight: 500;
+  font-size: 105px;
+  font-weight: 480;
   line-height: 0.92em;
   padding: 20px 0 30px;
   transition: all 0.8s ease-in-out;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-banner-six .product-text {
   padding: 150px 0;
+
 }
 .hero-banner-six .product-text *,
 .hero-banner-six .product-img {
@@ -132,10 +133,89 @@ h6 {
 .hero-banner-six .slick-active .product-img {
   transform: translateY(0);
 }
+.product-img {
+  width: 360px; 
+  height: auto; 
+  align-content: end;
+}
 
 
+.product-img-container {
+  margin-bottom: 190px;
+  margin-left: 50px;
+  margin-right: -150px;
+}
+
+.box-layout {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+.product_slider_space {
+  margin: 0 -20px;
+}
+.product_slider_space .item {
+  padding: 0 0px;
+}
 
 
+.product-slider-arrow-one li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: var(--heading);
+  font-size: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+.product-slider-arrow-one li:hover {
+  background: var(--heading);
+  color: #fff;
+  transform: scale(1);
+}
+.product-block-one {
+  position: relative;
+  background: #F1F7FB;
+ height: 350px;width: 350px;  z-index: 5;
+ margin-bottom: 50px;
+ text-align: center;
+}
+.product-block-one .product-img{
+
+  margin: 30px auto 0;
+
+}
+.product-block-one:hover .product-img {
+  transform: scale(0.95);
+}
+.product-block-one .category-tag {
+  background: #fff;
+  line-height: 33px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0 18px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-block-one .category-tag:hover {
+  background: black;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+.tran4s {
+  transition: all 0.4s ease-in-out;
+}
 
 
 

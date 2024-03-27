@@ -1,54 +1,45 @@
 import React from "react";
-import Slider from "react-slick";
-
+import imagen1 from "../../assets/images/shop/foto1.png";
 
 const HeroSlider = () => {
-  //   slider settings
-  const settings = {
-    dots: false,
-    arrows: false,
-    centerPadding: "0px",
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    fade: true,
-  };
-
   const sliderContent = [
     {
       id: 1,
-      
-    },
-    {
-      id: 2,
-      
+      img: imagen1,
+      title: (
+        <>
+          Fun Flex <br /> entertainment
+        </>
+      ),
+      text: "The best entertainment e-commerce on the market.",
     },
   ];
 
   return (
     <>
-      <Slider {...settings} arrows={false}>
-        {sliderContent.map((item) => (
-          <div className="item" key={item.id}>
-            <div className="container">
-              <div className="row align-items-end">
-                <div className="col-xl-5 col-md-6">
-                  <div className="product-text">
-                    <h6>{item.meta}</h6>
-                    <h2 className="font-recoleta">{item.title}</h2>
-                    <p className="text-lg mb-50 lg-mb-30">{item.text}</p>
-                  
-                  </div>
+      {sliderContent.map((item) => (
+        <div className="item" key={item.id}>
+          <div className="container">
+            <div className="row align-items-end">
+              <div className="col-xl-5 col-md-6">
+                <div className="product-text">
+                  <h2 className="font-recoleta">{item.title}</h2>
+                  <h5 className="text-lg mb-50 lg-mb-30">{item.text}</h5>
                 </div>
-
-               
+              </div>
+              <div className="col-xl-7 col-md-6">
+                <div className="product-img-container">
+                  <img
+                    src={item.img}
+                    alt="slide product"
+                    className="m-auto ms-lg-auto product-img tran5s"
+                  />
+                </div>
               </div>
             </div>
-
           </div>
-        ))}
-      </Slider>
+        </div>
+      ))}
     </>
   );
 };
