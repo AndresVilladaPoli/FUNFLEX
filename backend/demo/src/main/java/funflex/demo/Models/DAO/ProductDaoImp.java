@@ -17,7 +17,7 @@ public class ProductDaoImp implements IProductDao{
     private EntityManager em;
 
     @SuppressWarnings("unchecked")
-   // @Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     @Override
     public List<Product> findAll() 
     { 
@@ -25,7 +25,7 @@ public class ProductDaoImp implements IProductDao{
     }
 
     @Override
-  //  @Transactional
+    @Transactional
     public void save(Product product)
     {
         if(product.getIdProduct() != null && product.getIdProduct() > 0)
@@ -41,7 +41,7 @@ public class ProductDaoImp implements IProductDao{
 
 
     @Override
-   // @Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     public Product findOne(Long IdProduct) {
 
 
@@ -52,7 +52,7 @@ public class ProductDaoImp implements IProductDao{
 
 
     @Override
-  //  @Transactional
+    @Transactional
     public void delete(Long IdProduct) {
       
       Product product = findOne(IdProduct);

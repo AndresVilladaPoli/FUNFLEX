@@ -48,15 +48,15 @@ public class ProductController{
 
     }
 
-    @GetMapping("/formproduct/{IdProducto}")   
-    public String EditProduct(@PathVariable(value = "IdProducto") Long IdProducto ,Model model)
+    @GetMapping("/formproduct/{IdProduct}")   
+    public String EditProduct(@PathVariable(value = "IdProduct") Long IdProduct ,Model model)
     {
 
         Product product = null;
 
-        if(IdProducto > 0)
+        if(IdProduct > 0)
         {
-            product = productDao.findOne(IdProducto);
+            product = productDao.findOne(IdProduct);
         }
         else
         {
@@ -68,6 +68,17 @@ public class ProductController{
 
 
         return "formproduct";
+    }
+
+    @GetMapping("/delete/{IdProduct}")
+    public String DeleteProduct(@PathVariable Long IdProduct)
+    {
+       if(IdProduct>0)
+       {
+         productDao.delete(IdProduct);
+       }
+
+       return "redirect:/listproduct";
     }
 
 }

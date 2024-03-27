@@ -20,7 +20,7 @@ public class CustomerDaoImp implements ICustomerDao{
     private EntityManager em;
 
     @SuppressWarnings("unchecked")
-   // @Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     @Override
     public List<Customer> findAll() 
     { 
@@ -28,7 +28,7 @@ public class CustomerDaoImp implements ICustomerDao{
     }
 
     @Override
-  //  @Transactional
+    @Transactional
     public void save(Customer customer)
     {
         if(customer.getId() != null && customer.getId() > 0)
@@ -44,7 +44,7 @@ public class CustomerDaoImp implements ICustomerDao{
 
 
     @Override
-   // @Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     public Customer findOne(Long Id) {
 
 
@@ -55,7 +55,7 @@ public class CustomerDaoImp implements ICustomerDao{
 
 
     @Override
-  //  @Transactional
+    @Transactional
     public void delete(Long Id) {
       
       Customer customer = findOne(Id);
