@@ -180,24 +180,12 @@
 
 // ripple btn
 .slick-rounded-arrow.ripple-btn {
-    &.is_dark {
-        .slick-arrow {
-            &::before {
-                background: rgba(255, 255, 255, 0.2);
-                color: #fff;
-            }
-            &:hover {
-                &::before {
-                    background: rgba(255, 255, 255, 0.3);
-                }
-            }
-        }
-    }
+
     &.is_light {
         .slick-arrow {
             &::before {
                 background: rgba(0, 0, 0, 0.1);
-                color: var(--heading);
+                color: black;
             }
             &:hover {
                 &::before {
@@ -210,8 +198,10 @@
 }
 .ripple-btn {
     .slick-arrow {
+        margin-right: 10px;
         &.slick-prev {
             @media (min-width: 1700px) {
+               
                 right: 17.5%;
             }
             &::before {
