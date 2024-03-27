@@ -69,4 +69,15 @@ public class CustomerController{
         return "formcustomer";
     }
 
+    @GetMapping("/delete/{Id}")
+    public String DeleteCustomer(@PathVariable Long Id)
+    {
+       if(Id>0)
+       {
+         customerDao.delete(Id);
+       }
+
+       return "redirect:/listcustomer";
+    }
+
 }

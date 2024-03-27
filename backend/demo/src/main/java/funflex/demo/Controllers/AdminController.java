@@ -69,4 +69,15 @@ public class AdminController{
         return "formadmin";
     }
 
+    @GetMapping("/delete/{IdAdmin}")
+    public String DeleteAdmin(@PathVariable Long IdAdmin)
+    {
+       if(IdAdmin>0)
+       {
+         adminDao.delete(IdAdmin);
+       }
+
+       return "redirect:/listadmin";
+    }
+
 }
