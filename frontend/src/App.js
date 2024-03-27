@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import AllRoutes from "./router/AllRoutes";
+import ScrollToTop from "./components/elements/ScrollToTop";
+
 
 function App() {
   useEffect(() => {
@@ -15,6 +17,7 @@ function App() {
   return (
       <div className="h-100">
         <AllRoutes />
+        <ScrollToTop />
         <ToastContainer />
       </div>
   );
