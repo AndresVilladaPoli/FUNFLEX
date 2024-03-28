@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import AllRoutes from "./router/AllRoutes";
 import ScrollToTop from "./components/elements/ScrollToTop";
-
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 function App() {
   useEffect(() => {
@@ -15,11 +16,13 @@ function App() {
   }, []);
 
   return (
+    <Provider store={store}>
       <div className="h-100">
         <AllRoutes />
         <ScrollToTop />
         <ToastContainer />
       </div>
+    </Provider>
   );
 }
 
