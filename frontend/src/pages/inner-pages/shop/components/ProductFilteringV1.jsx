@@ -3,7 +3,7 @@ import React from "react";
 const ProductFilteringV1 = () => {
   return (
     <>
-      <p>Showing 1–6 of 10 results</p>
+      <p>Showing 1–3 of 9 results</p>
 
       <ul className="shop-filter-one style-none d-md-flex align-items-center">
         <li className="me-md-3">

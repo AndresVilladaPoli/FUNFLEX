@@ -36,10 +36,8 @@ const ProductDescriptions = () => {
             <div className="col-xl-6">
               <h5>Description detail:</h5>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Incidunt quia pariatur, voluptates ipsa earum perspiciatis cupiditate
-                quisquam laudantium placeat dignissimos voluptate! Repudiandae quo 
-                deleniti nam unde quos beatae distinctio exercitationem!
+              
+The PlayStation 5 (PS5) is the latest video game console developed by Sony Interactive Entertainment. Released in November 2020, the PS5 represents a significant leap in terms of power, performance, and features compared to its predecessor, the PlayStation 4.
               </p>
             </div>
           </div>
@@ -51,13 +49,34 @@ const ProductDescriptions = () => {
               <h5>Specification:</h5>
               <ul className="style-none product-feature">
                 <li>
-                  Lorem ipsum
+                  <strong>CPU:</strong> Custom AMD Ryzen Octa-core.
                 </li>
                 <li>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <strong>GPU:</strong> Custom RDNA 2 with ray tracing.
                 </li>
                 <li>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <strong>Memory:</strong> 8GB GDDR6 RAM.
+                </li>
+                <li>
+                <strong>Storage:</strong> Various configurations.
+                </li>
+                <li>
+                <strong>Optical Drive:</strong> 4K UHD Blu-ray.
+                </li>
+                <li>
+                <strong>Connectivity:</strong> Wi-Fi 6, Bluetooth 5.1, USB ports.
+                </li>
+                <li>
+                <strong>Audio:</strong> Tempest 3D AudioTech.
+                </li>
+                <li>
+                <strong>Resolution:</strong> 4K gaming support.
+                </li>
+                <li>
+                <strong>Controller:</strong> DualSense wireless.
+                </li>
+                <li>
+                <strong>Compatibility:</strong> Supports a wide range of PS4 games.
                 </li>
               </ul>
             </div>

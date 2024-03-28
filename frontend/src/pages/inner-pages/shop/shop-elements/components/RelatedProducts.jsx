@@ -78,11 +78,9 @@ const RelatedProducts = () => {
                   </Link>
                   {item.ratings}
                 </div>
-                <div className="price">${item.price}</div>
+                <div className="price">${item.price} COP</div>
               </div>
-              {/* <!-- /.product-meta --> */}
             </div>
-            {/* <!-- /.product-block-two --> */}
           </div>
         ))}
       </Slider>

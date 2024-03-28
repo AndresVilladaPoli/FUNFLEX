@@ -1,8 +1,9 @@
 import React from "react";
 import ItemContent from "./ItemContent";
 
-import img2 from "../../../../../../assets/images/shop/Rectangle 11.png";
-import img3 from "../../../../../../assets/images/shop/Rectangle 11.png";
+import img1 from "../../../../../../assets/images/shop/image 9ps5 3.png";
+import img2 from "../../../../../../assets/images/shop/image 10ps5 1.png";
+import img3 from "../../../../../../assets/images/shop/image 11ps5 2.png";
 
 const SingleProduct = ({ product }) => {
   const smallThumbContent = [
@@ -10,22 +11,29 @@ const SingleProduct = ({ product }) => {
       id: 1,
       img: product.img,
       isActive: "active",
-      itemTarget: "#img1",
-      isSelected: "false",
+      itemTarget: "#img",
+      isSelected: false,
     },
     {
       id: 2,
-      img: img2,
+      img: img1,
       isActive: "",
-      itemTarget: "#img2",
-      isSelected: "true",
+      itemTarget: "#img1",
+      isSelected: true,
     },
     {
       id: 3,
+      img: img2,
+      isActive: "",
+      itemTarget: "#img2",
+      isSelected: false,
+    },
+    {
+      id: 4,
       img: img3,
       isActive: "",
       itemTarget: "#img3",
-      isSelected: "false",
+      isSelected: false,
     },
   ];
 
@@ -34,16 +42,22 @@ const SingleProduct = ({ product }) => {
       id: 1,
       img: product.img,
       isActive: "show active",
-      itemTarget: "img1",
+      itemTarget: "img",
     },
     {
-      id: 2,
+     id: 2,
+    img: img1,
+    isActive: "",
+    itemTarget: "img1",
+    },
+    {
+      id: 3,
       img: img2,
       isActive: "",
       itemTarget: "img2",
     },
     {
-      id: 3,
+      id: 4,
       img: img3,
       isActive: "",
       itemTarget: "img3",
@@ -98,13 +112,12 @@ const SingleProduct = ({ product }) => {
             <div className="price">${product.price}</div>
             <p className="availability">38 Piece Available </p>
             <p className="description-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsa aspernatur tempora ad quis, debitis quibusdam, libero quisquam ducimus, sed labore placeat molestiae odit? Voluptates totam accusantium quam dignissimos magnam?{" "}
-            </p>
+            The PS5 Slim is a compact gaming console with a modern design, delivering powerful gaming experiences.            </p>
 
             <ItemContent product={product} />
           </div>
         </div>
-        {/* End .col */}{" "}
+        {" "}
       </div>
     </>
   );

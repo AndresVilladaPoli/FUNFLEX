@@ -16,14 +16,12 @@ const PortfolioV11 = () => {
       <Header />
 
       <div className="vcamp-text-block-one pt-180 md-pt-130">
-        <div className="container">
           <div className="text-wrapper text-center ps-0">
             <div className="title-style-one">
               <h3 className="title page-title font-recoleta">Products</h3>
             </div>
             <p className="text-lg pt-35 lg-pt-30">The best entertainment products on the market.</p>
-            </div>
-          <div className="breadcrumb-area">
+          </div>
             <div className="container">
               <div className="d-flex align-items-center justify-content-between">
                 <nav className="breadcrumb-style-one mt-20">
@@ -31,8 +29,6 @@ const PortfolioV11 = () => {
                 </nav>
               </div>
             </div>
-          </div>
-        </div>
       </div>
       <div className="product-section-four mt-150 lg-mt-90">
         <div className="container">
