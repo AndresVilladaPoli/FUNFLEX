@@ -34,9 +34,9 @@ FUN FLEX is an E-Commerce project specialized in the sale of digital entertainme
 
 
 
-## Autores ✒️
+## Authors ✒️
 
-* **Andrea Álvarez Posada** - *Desarrollador*
-* **Mateo Echeverri Jiménez** - *Desarrollador*
-* **Dayron Restrepo Pérez** - *Desarrollador*
-* **Andrés Ricardo Villada Marín** - *Desarrollador*
+* **Andrea Álvarez Posada** - *Developer*
+* **Mateo Echeverri Jiménez** - *Developer*
+* **Dayron Restrepo Pérez** - *Developer*
+* **Andrés Ricardo Villada Marín** - *Developer*
