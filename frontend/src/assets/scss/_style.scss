@@ -319,4 +319,73 @@ h6 {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
+/*^^^^^^^^^^^^^^^^^^^^^^^ Pagination ^^^^^^^^^^^^^^^^^^^^^^*/
+.page-pagination-one ul li {
+  font-family: "gorditamedium";
+  font-size: 20px;
+  color: #3e3e3e;
+  margin-right: 20px;
+}
+.page-pagination-one ul li button {
+  transition: all 0.3s ease;
+}
+.page-pagination-one ul.justify-content-center li {
+  margin: 0 10px;
+}
+.page-pagination-one ul li:hover button,
+.page-pagination-one ul li.active button,
+.dark-bg .page-pagination-one ul li.active button {
+  color: var(--red-one);
+}
+.page-pagination-one ul li.arrow {
+  font-size: 28px;
+  color: #000;
+}
+.page-pagination-one ul li:nth-child(6) a {
+  font-size: 18px;
+}
+.page-pagination-one ul li a span {
+  display: inline-block;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.page-pagination-one ul li a:hover span,
+.page-pagination-one ul li.active a span {
+  background: #232323;
+  color: #fff;
+}
+.page-pagination-one.round-style ul li {
+  margin: 0 5px;
+}
+.dark-bg .page-pagination-one ul li,
+.dark-bg .page-pagination-one ul li button,
+.dark-bg .page-pagination-one ul li.arrow button,
+.dark-layout .page-pagination-one ul li button,
+.dark-layout .page-pagination-one ul li.arrow button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.breadcrumb-style-one .breadcrumb-item a,
+.breadcrumb-style-one .breadcrumb-item {
+  font-size: 17px;
+  color: #949494;
+}
+.breadcrumb-style-one .breadcrumb-item.active {
+  font-family: "gorditamedium";
+  color: #000;
+}
+.breadcrumb-style-one .breadcrumb-item + .breadcrumb-item::before {
+
+  margin-top: 1px;
+}
+.breadcrumb-style-one .breadcrumb-item a:hover {
+  text-decoration: underline;
+}
 
