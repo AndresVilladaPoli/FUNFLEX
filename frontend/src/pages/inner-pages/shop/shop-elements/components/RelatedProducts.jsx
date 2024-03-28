@@ -40,7 +40,6 @@ const RelatedProducts = () => {
   };
 
   const allCollection = products.slice(0, 4);
-
   return (
     <>
       <Slider {...settings}>
@@ -66,8 +65,6 @@ const RelatedProducts = () => {
                   <i className="bi bi-cart-check"></i>
                 </button>
               </div>
-              {/* <!-- /.img-holder --> */}
-
               <div className="product-meta">
                 <div className="d-lg-flex align-items-center justify-content-between">
                   <Link
@@ -78,7 +75,7 @@ const RelatedProducts = () => {
                   </Link>
                   {item.ratings}
                 </div>
-                <div className="price">${item.price} COP</div>
+                <div className="price">${item.price}</div>
               </div>
             </div>
           </div>
