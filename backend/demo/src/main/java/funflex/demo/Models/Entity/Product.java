@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 public class Product implements Serializable {
     
-    private String NameProduct,Description,UnitsAvailable,Price;
+    private String NameProduct,Description,UnitsAvailable,Price, Category;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdProduct;
@@ -45,6 +45,11 @@ public class Product implements Serializable {
     public void setIdProduct(Long idProduct) {
         IdProduct = idProduct;
     }
-
+    public String getCategory() {
+        return Category;
+    }
+    public void setCategory(String category) {
+        Category = category;
+    }
     
 }
