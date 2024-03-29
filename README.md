@@ -7,7 +7,7 @@
 
 FUN FLEX is an E-Commerce project specialized in the sale of digital entertainment products.
 
-## How to Install :tw-2753:
+## How to Install
 
 - First of all, you need to have jdk 17 version (you can ). We recommend using Microsoft Visual Studio Code as your IDE.
 - Then, within Visual Studio Code, you need to download the following Spring Boot extensions:
@@ -20,14 +20,14 @@ FUN FLEX is an E-Commerce project specialized in the sale of digital entertainme
 
    Also, it is recommended to have the Live Server extension 
    
-   ![Image text](README_IMG/LiveS.png)
+   ![Image text](README_IMG/LiveS.PNG)
    
    - Now, we must download MySQL Workbench to create our database
 	- Once we have established the localhost connection, we must create a database (Schema) called funflexdb
 	- the localhost user must be "root" (default user) and must not have a password
 
 
-![Image text](README_IMG/Schema.png)
+![Image text](README_IMG/Schema.PNG)
 
 
 
