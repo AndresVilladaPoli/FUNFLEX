@@ -4,6 +4,7 @@ import ShopStandard from "../pages/home-pages/ShopStandard";
 import PortfolioV11 from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV11";
 import ProductDetails from "../pages/inner-pages/shop/shop-elements/ProductDetails";
 import DynamicProductDetails from "../pages/inner-pages/shop/shop-elements/DynamicProductDetails";
+import Cart from "../pages/inner-pages/shop/shop-elements/Cart";
 
 const AllRoutes = () => {
   return (
@@ -12,6 +13,8 @@ const AllRoutes = () => {
         <Route path="/" element={<ShopStandard />} />
         <Route path="/products" element={<PortfolioV11/>} />
         <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+
         <Route
           path="/product-details/:id"
           element={<DynamicProductDetails />}
