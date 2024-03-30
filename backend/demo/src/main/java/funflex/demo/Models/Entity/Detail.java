@@ -6,8 +6,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Detail")
 
 public class Detail {
@@ -16,8 +20,12 @@ public class Detail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long IdDetail;
 
+    @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Product product;
+
+    @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Sale sale;
+    
     private int amount;
 
     public long getIdDetail() {
