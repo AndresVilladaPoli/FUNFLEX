@@ -916,3 +916,65 @@ body .theme-btn-nine:hover {
   background: #5FA1C6;
   color: #ffffff;
 }
+
+.error-page {
+  background: #AFCFE1;
+  min-height: 100vh;
+  padding: 185px 10% 50px;
+  position: relative;
+  z-index: 2;
+}
+.error-page h6 {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 5px;
+}
+.error-page h1 {
+  font-size: 82px;
+  color: #fff;
+  padding: 10px 0 25px;
+}
+.error-page p {
+  color: #fff;
+  margin-bottom: 55px;
+}
+.error-page .theme-btn-four {
+  font-size: 14px;
+}
+.error-page .illustration {
+  max-width: 64%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body .theme-btn-four {
+  font-family: "gorditamedium";
+  font-size: 18px;
+  color: #fff;
+  padding: 0 28px;
+  min-width: 180px;
+  text-align: center;
+  line-height: 51px;
+  border: 2px solid;
+  background: var(--red-one);
+  transition: all 0.3s ease-in-out;
+}
+body .theme-btn-four:hover {
+  background: transparent;
+  color: black;
+}
+
+.error-page .theme-btn-four {
+  font-size: 14px;
+}
+
+.text-lg {
+  font-size: 24px;
+  line-height: 1.7em;
+}
+
+.shapes {
+  position: absolute;
+  z-index: -1;
+}

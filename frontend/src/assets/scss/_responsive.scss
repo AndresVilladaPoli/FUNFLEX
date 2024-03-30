@@ -91,3 +91,30 @@
   body .theme-btn-seven {
     line-height: 52px;
   }
+
+  .error-page h6 {
+    font-size: 20px;
+  }
+  .error-page h1 {
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+  .error-page p {
+    margin-bottom: 40px;
+  }
+
+  .error-page {
+    padding: 135px 12px 50px;
+  }
+
+  .case-details-one .title br,
+  .error-page p br,
+  .hero-banner-nine .scroll-bar,
+  .pr-pagination-one .pr-name {
+    display: none;
+  }
+
+  @media (max-width: 1199px) {
+    .text-lg {
+      font-size: 19px;
+    }}

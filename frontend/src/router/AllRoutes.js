@@ -5,6 +5,7 @@ import PortfolioV11 from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV
 import ProductDetails from "../pages/inner-pages/shop/shop-elements/ProductDetails";
 import DynamicProductDetails from "../pages/inner-pages/shop/shop-elements/DynamicProductDetails";
 import Cart from "../pages/inner-pages/shop/shop-elements/Cart";
+import NotFound from "../pages/NotFound";
 
 const AllRoutes = () => {
   return (
@@ -19,6 +20,8 @@ const AllRoutes = () => {
           path="/product-details/:id"
           element={<DynamicProductDetails />}
         />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
