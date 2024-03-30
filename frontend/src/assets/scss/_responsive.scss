@@ -117,4 +117,43 @@
   @media (max-width: 1199px) {
     .text-lg {
       font-size: 19px;
-    }}
+    }
+    body .theme-btn-one {
+      font-size: 16px;
+      padding: 0 32px;
+      line-height: 52px;
+    }
+  }
+
+  .fancy-banner-one .theme-btn-one {
+    width: 230px;
+    font-size: 17px;
+    line-height: 60px;
+  }
+
+    .user-data-page .illustration-wrapper blockquote {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .user-data-page .illustration-wrapper .bio {
+      font-size: 18px;
+    }
+    .user-data-page .form-wrapper h2 {
+      font-size: 35px;
+      line-height: 1.24em;
+    }
+    .user-data-page .form-wrapper .header-info {
+      font-size: 18px;
+    }
+    .user-data-page .form-wrapper h2 span:before {
+      height: 2px;
+      bottom: 3px;
+    }
+
+    .user-data-page .form-wrapper {
+      padding: 30px 2%;
+    }
+
+    .user-data-page .form-wrapper {
+      padding: 40px 12px 20px;
+    }

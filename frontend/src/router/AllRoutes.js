@@ -6,6 +6,7 @@ import ProductDetails from "../pages/inner-pages/shop/shop-elements/ProductDetai
 import DynamicProductDetails from "../pages/inner-pages/shop/shop-elements/DynamicProductDetails";
 import Cart from "../pages/inner-pages/shop/shop-elements/Cart";
 import NotFound from "../pages/NotFound";
+import SignIn from "../pages/inner-pages/shop/shop-elements/SignIn";
 
 const AllRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AllRoutes = () => {
         />
 
         <Route path="*" element={<NotFound />} />
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
     </>
   );
