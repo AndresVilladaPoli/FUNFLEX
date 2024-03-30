@@ -5,7 +5,7 @@
 
 
 
-FUN FLEX is an E-Commerce project specialized in the sale of digital entertainment products.
+FUN FLEX is an E-Commerce project specialized in the sale of digital entertainment products, such as video games, game consoles, game accessories, movies, music and e-books. We also offer a diverse selection of downloadable digital content and physical products related to entertainment.
 
 ## How to Install
 
