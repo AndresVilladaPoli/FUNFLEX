@@ -2,16 +2,27 @@ package main.java.funflex.demo.Models.Entity;
 
 import funflex.demo.Models.Entity.Customer;
 import funflex.demo.Models.Entity.Product;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShoppingCart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
+
+    @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Product product;
+
+    @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Customer Client;
+
     private int Amount;
     
     public long getId() {

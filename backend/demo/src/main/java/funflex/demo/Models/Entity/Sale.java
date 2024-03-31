@@ -5,8 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Sale")
 public class Sale {
 
@@ -16,7 +20,10 @@ public class Sale {
 
 
     private Date date;
+
     private Double Total;
+
+    @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Customer Client;
 
     public long getIdSale() {
