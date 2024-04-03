@@ -999,7 +999,14 @@ body .theme-btn-four:hover {
   padding-bottom: 15px;
 }
 .user-data-page .illustration-wrapper .illustration-holder {
+height: 100%;
+width: 90%;
+}
+.user-data-page .illustration{
   width: 100%;
+}
+.user-data-page .illustrationad{
+  height: 100%;
 }
 .user-data-page .form-wrapper {
   width: 52%;
@@ -1014,7 +1021,7 @@ body .theme-btn-four:hover {
   margin-left: 450px;
 }
 .user-data-page .go-back-button:hover {
-  color: var(--red-one);
+  color: #5FA1C6;
   text-decoration: underline;
 }
 .user-data-page .form-wrapper h2 {
@@ -1022,7 +1029,7 @@ body .theme-btn-four:hover {
   line-height: 1.161em;
 }
 .user-data-page .form-wrapper h2 span {
-  color: var(--red-one);
+  color: #5FA1C6;
   position: relative;
   display: inline-block;
 }
@@ -1031,13 +1038,13 @@ body .theme-btn-four:hover {
   position: absolute;
   width: 97%;
   height: 4px;
-  background: var(--red-one);
+  background: #5FA1C6;
   left: 0;
   bottom: 0;
 }
 .user-data-page .form-wrapper .header-info {
   font-size: 24px;
-  color: var(--heading);
+  color: black;
   letter-spacing: -1px;
 }
 .user-data-page .form-wrapper .header-info a {
@@ -1116,14 +1123,14 @@ body .theme-btn-four:hover {
 .user-data-form .agreement-checkbox label {
   position: relative;
   font-size: 15px;
-  color: var(--heading);
+  color: black;
   cursor: pointer;
   padding-left: 22px;
   line-height: 18px;
   transition: all 0.1s ease-in-out;
 }
 .user-data-form .agreement-checkbox label a {
-  color: var(--p-color);
+  color: black;
   text-decoration: underline;
 }
 .user-data-form .agreement-checkbox input[type="checkbox"] {
@@ -1157,7 +1164,7 @@ body .theme-btn-four:hover {
 }
 .user-data-form .agreement-checkbox a:hover {
   text-decoration: underline;
-  color: var(--p-color);
+  color: black;
 }
 .user-data-form .theme-btn-one {
   font-size: 14px;
@@ -1174,15 +1181,6 @@ body .theme-btn-four:hover {
   margin: 0 auto 30px;
 }
 
-.user-data-page .go-back-button {
-  font-size: 15px;
-  font-family: "gorditamedium";
-  color: #000;
-}
-.user-data-page .go-back-button:hover {
-  color: var(--red-one);
-  text-decoration: underline;
-}
 
 .left{
   text-align: right;

@@ -7,6 +7,8 @@ import DynamicProductDetails from "../pages/inner-pages/shop/shop-elements/Dynam
 import Cart from "../pages/inner-pages/shop/shop-elements/Cart";
 import NotFound from "../pages/NotFound";
 import SignIn from "../pages/inner-pages/shop/shop-elements/SignIn";
+import SignUpAdmin from "../pages/inner-pages/shop/shop-elements/SignUpAdmin";
+
 
 const AllRoutes = () => {
   return (
@@ -24,6 +26,8 @@ const AllRoutes = () => {
 
         <Route path="*" element={<NotFound />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up-admin" element={<SignUpAdmin />} />
+
       </Routes>
     </>
   );
