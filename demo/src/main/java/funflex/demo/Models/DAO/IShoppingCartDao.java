@@ -1,4 +1,4 @@
-package main.java.funflex.demo.Models.DAO;
+package funflex.demo.Models.DAO;
 
 import funflex.demo.Models.Entity.ShoppingCart;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package main.java.funflex.demo.Models.DAO;
+package funflex.demo.Models.DAO;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -8,7 +8,7 @@ import java.util.Locale;
 import java.util.Date;
 
 import funflex.demo.Models.DAO.CustomerDaoImp;
-import main.java.funflex.demo.Models.Entity.ShoppingCart;
+import funflex.demo.Models.Entity.ShoppingCart;
 import funflex.demo.Models.Entity.Detail;
 import funflex.demo.Models.Entity.Sale;
 import funflex.demo.Models.DAO.ISaleDao;

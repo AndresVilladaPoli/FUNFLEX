@@ -9,13 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
+//@Transactional
 public class DetailDaoImp {
     
     private final IDetailDao iDetailDao;
 
     @Autowired
-    public DetailDaoImp(main.java.funflex.demo.Models.DAO.IDetailDao iDetailDao) {
+    public DetailDaoImp(funflex.demo.Models.DAO.IDetailDao iDetailDao) {
         this.iDetailDao = iDetailDao;
     }
 
@@ -23,7 +23,7 @@ public class DetailDaoImp {
         this.iDetailDao.save(detail);
     }
 
-    public List<Detail> getDetailBySale(long IdSale){
+    public List<main.java.funflex.demo.Models.Entity.Detail> getDetailBySale(long IdSale){
         return this.iDetailDao.findBySaleId(IdSale);
     }
 

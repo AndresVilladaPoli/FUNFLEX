@@ -1,4 +1,4 @@
-package main.java.funflex.demo.Models.DAO;
+package funflex.demo.Models.DAO;
 
 import funflex.demo.Models.Entity.Detail;
 import java.util.List;
