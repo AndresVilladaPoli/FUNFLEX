@@ -1054,9 +1054,32 @@ width: 90%;
 .user-data-page .form-wrapper .copyright-text {
   font-size: 15px;
 }
+
+.user-data-form .input-group-meta .form-control {
+  position: relative;
+}
+
+.user-data-form .input-group-meta  .form-control{
+  width: 100%;
+  height: 60px;
+  font-size: 17px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 0 52px 0 20px;
+  background: transparent;
+}
+.user-data-form .input-group-meta  label {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-bottom: 2px;
+}
+
 .user-data-form .input-group-meta {
   position: relative;
 }
+
 .user-data-form .input-group-meta input {
   width: 100%;
   height: 60px;
