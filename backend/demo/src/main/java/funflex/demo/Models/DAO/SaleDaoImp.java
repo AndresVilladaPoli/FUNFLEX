@@ -39,8 +39,8 @@ public class SaleDaoImp {
     
     
 
-    public List<Sale> getSalesByClient(long IdCustomer){
-        return this.iSaleDao.findByCustomerId(IdCustomer);
+    public List<Sale> getSalesByClient(String userName){
+        return this.iSaleDao.findByCustomerId(userName);
     }
 
     public void createSale(long IdCustomer){
