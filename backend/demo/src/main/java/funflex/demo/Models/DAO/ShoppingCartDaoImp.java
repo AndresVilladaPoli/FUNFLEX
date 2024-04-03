@@ -21,9 +21,10 @@ public class ShoppingCartDaoImp {
         this.iShoppingCartDao = iShoppingCartDao;
     }
 
-    public List<ShoppingCart> getListByCustomerId(long IdCustomer){
-        return this.iShoppingCartDao.findByClientId(IdCustomer);
+    public List<ShoppingCart> getListByCustomer(String userName){
+        return this.iShoppingCartDao.findByCustomerUserName(userName);
     }
+    
 
     public void cleanShoppingCart(long IdCustomer){
         this.iShoppingCartDao.deleteByCustomerId(IdCustomer);
