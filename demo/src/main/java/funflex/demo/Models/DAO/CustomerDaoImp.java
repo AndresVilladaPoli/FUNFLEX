@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import funflex.demo.Controllers.LoginController.CustomerLoginDTO;
 import funflex.demo.Models.Entity.Customer;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -62,6 +63,12 @@ public class CustomerDaoImp implements ICustomerDao{
 
       em.remove(customer);
 
+    }
+
+    @Override
+    public boolean login(CustomerLoginDTO customerLoginDTO) {
+     
+      return true; 
     }
 
 }
