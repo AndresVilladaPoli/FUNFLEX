@@ -41,7 +41,7 @@ const SignUp = () => {
 
           <div className="user-data-form mt-80 lg-mt-50">
             <h2 className="font-recoleta">
-              Hi future<span>Admin</span>, welcome <br /> Back!
+              Hi future <span>Admin</span>, welcome <br /> Back!
             </h2>
             <p className="header-info pt-20 pb-50 lg-pb-30">
               Have an account? Login <Link to="/sign-in"> here</Link>
