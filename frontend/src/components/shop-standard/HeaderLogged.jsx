@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MegaMenuOne from "../common/header/mega-menu/MegaMenuOne";
-const Header = ({ className = "" }) => {
+const HeaderLogged = ({ className = "" }) => {
   const [navbar, setNavbar] = useState(false);
-
   const changeBackground = () => {
     if (window.scrollY >= 95) {
       setNavbar(true);
@@ -13,7 +12,7 @@ const Header = ({ className = "" }) => {
   };
 
   window.addEventListener("scroll", changeBackground);
-
+ 
   return (
     <header
       className={`theme-main-menu sticky-menu theme-menu-one ${
@@ -56,7 +55,7 @@ const Header = ({ className = "" }) => {
           <div className="cart">
               
               <Link
-                to="/"
+                to="/cart"
                 className="d-flex "
               >
                 <img
@@ -66,38 +65,35 @@ const Header = ({ className = "" }) => {
               </Link>
             </div>
             <div className="d-none d-sm-block">
+              
               <Link
-                to="/sign-in"
+                to="/"
                 className="d-flex align-items-center login-btn"
               >
                 <img
                   src={require("../../assets/images/icon/icon_01.svg").default}
                   alt="icon"
                 />
-                <span>login</span>
+                <span>Profile</span>
               </Link>
             </div>
-            <img
-                  src={require("../../assets/images/icon/icon_01.svg").default}
+
+            <div className="login-btn">
+              
+              <Link
+                to="/"
+                className="d-flex "
+              >
+                <img
+                  src={require("../../assets/images/icon/icon_04.svg").default}
                   alt="icon"
                 />
-            <div className="login-btn">
-            
-      <button
-        className="dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-       
-<span>SignUp</span>    
-  </button>
-      <div className="dropdown-menu dropdown-menu-end">
-        <Link to="/sign-up-admin" className="dropdown-item">Admin</Link>
-        <Link to="/sign-up-client" className="dropdown-item">Client</Link>
-      </div>
-    </div>
+                <span>Logout</span>
 
+              </Link>
+            </div>
+
+            
 
           </div>
         </div>
@@ -106,4 +102,4 @@ const Header = ({ className = "" }) => {
   );
 };
 
-export default Header;
+export default HeaderLogged;

@@ -77,14 +77,19 @@ const Header = ({ className = "" }) => {
                 <span>login</span>
               </Link>
             </div>
-
+            <img
+                  src={require("../../assets/images/icon/icon_01.svg").default}
+                  alt="icon"
+                />
             <div className="login-btn">
+            
       <button
         className="dropdown-toggle"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
+       
 <span>SignUp</span>    
   </button>
       <div className="dropdown-menu dropdown-menu-end">
