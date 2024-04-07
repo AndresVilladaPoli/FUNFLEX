@@ -1,4 +1,4 @@
-package main.java.funflex.demo.Models.Entity;
+package funflex.demo.Models.Entity;
 
 
 

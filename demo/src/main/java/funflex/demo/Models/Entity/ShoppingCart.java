@@ -1,38 +1,39 @@
 package main.java.funflex.demo.Models.Entity;
 
+import funflex.demo.Models.Entity.Customer;
 import funflex.demo.Models.Entity.Product;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Detail")
+public class ShoppingCart {
 
-public class Detail {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdDetail;
+    private long Id;
 
     @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Product product;
 
     @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
-    private Sale sale;
-    
-    private int amount;
+    private Customer Client;
 
-    public long getIdDetail() {
-        return IdDetail;
+    private int Amount;
+    
+    public long getId() {
+        return Id;
     }
-    public void setIdDetail(long idDetail) {
-        IdDetail = idDetail;
+    public void setId(long id) {
+        Id = id;
     }
     public Product getProduct() {
         return product;
@@ -40,16 +41,16 @@ public class Detail {
     public void setProduct(Product product) {
         this.product = product;
     }
-    public Sale getSale() {
-        return sale;
+    public Customer getClient() {
+        return Client;
     }
-    public void setSale(Sale sale) {
-        this.sale = sale;
+    public void setClient(Customer client) {
+        Client = client;
     }
     public int getAmount() {
-        return amount;
+        return Amount;
     }
     public void setAmount(int amount) {
-        this.amount = amount;
+        Amount = amount;
     }
 }
