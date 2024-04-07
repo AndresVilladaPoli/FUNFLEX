@@ -2,9 +2,10 @@ package funflex.demo.Models.Entity;
 
 import java.io.Serializable;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
  
@@ -18,18 +19,19 @@ public class Customer implements Serializable {
     private String Name,Email,Direction,TelephoneContact;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String IdCustomer;
 
     public Customer() {
     }
 
-    public Long getId() {
-        return id;
+    public String getIdCustomer() {
+        return IdCustomer;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdCustomer(String id) {
+        this.IdCustomer = id;
     }
 
     public String getName() {

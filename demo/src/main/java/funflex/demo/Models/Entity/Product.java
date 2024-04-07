@@ -11,7 +11,8 @@ import jakarta.persistence.Table;
 
 public class Product implements Serializable {
     
-    private String NameProduct,Description,UnitsAvailable,Price, Category;
+    private String NameProduct,Description,UnitsAvailable, Category;
+    private Float Price;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdProduct;
@@ -33,10 +34,10 @@ public class Product implements Serializable {
     public void setUnitsAvailable(String unitsAvailable) {
         UnitsAvailable = unitsAvailable;
     }
-    public String getPrice() {
+    public Float getPrice() {
         return Price;
     }
-    public void setPrice(String price) {
+    public void setPrice(Float price) {
         Price = price;
     }
     public Long getIdProduct() {

@@ -4,11 +4,11 @@ import funflex.demo.Models.Entity.ShoppingCart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
-public interface IShoppingCartDao extends JpaRepository<ShoppingCart, long[]> {
+public interface IShoppingCartDao extends JpaRepository<ShoppingCart,String> {
     
-    List<ShoppingCart> findByCustomerId(long IdCustomer);
-    List<ShoppingCart> findByClient_UserName(String CustomerEmail);
+    List<ShoppingCart> findByCustomerId(String IdCustomer);
+    List<ShoppingCart> findByCustomerName(String Name);
     
-    void deleteByCustomerId(long IdCustomer);
-    Long countByCustomerId(long id);
+    void deleteByCustomerId(String Id);
+    Long countByCustomerId(String id);
 }

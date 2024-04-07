@@ -1,10 +1,10 @@
 package funflex.demo.Models.DAO;
 
 import funflex.demo.Models.Entity.Sale;
-import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class ISaleDao extends JpaRepository<Sale, long[]> {
-    
-    List<Sale> findByCustomer_UserName(String userName);
+public interface ISaleDao extends JpaRepository<Sale,String> {
+
+    List<Sale> findByCustomerName(String Name);
 }

@@ -40,25 +40,27 @@ public class SaleDaoImp {
     
 
     public List<Sale> getSalesByClient(String userName){
-        return this.iSaleDao.findByCustomerId(userName);
+        return this.iSaleDao.findByCustomerName(userName);
     }
 
-    public void createSale(long IdCustomer){
-        Customer client = this.CustomerDaoImp.getByCustomerId(IdCustomer).get();
-        List<ShoppingCart> shoppingCartList = this.shoppingCartDaoImp.getListByCustomer(client.findOne());
+    public void createSale(String Name){
+        Customer client = this.customerDaoImp.findByCustomerName(Name);
+        List<ShoppingCart> shoppingCartList = this.shoppingCartDaoImp.getListByCustomer(client.getName());
+        
         DecimalFormat decimalFormat = new DecimalFormat("0.00", new DecimalFormatSymbols(Locale.US));
         decimalFormat.setRoundingMode(RoundingMode.DOWN);
-        //double Total = shoppingCartList.stream().mapToDouble(shoppingCartItem -> shoppingCartItem.getProduct().getPrice()
-        //        * shoppingCartItem.getAmount()).sum();
+        double total = shoppingCartList.stream().mapToDouble(shoppingCartItem -> shoppingCartItem.getProduct().getPrice() * shoppingCartItem.getAmount()).sum();
+               
         Sale sale = new Sale(Double.parseDouble(decimalFormat.format(total)), new Date(), client);
+        
         Sale saveSale = this.iSaleDao.save(sale);
         for (ShoppingCart shoppingCart : shoppingCartList) {
             Detail detail = new Detail();
             detail.setProduct(shoppingCart.getProduct());
             detail.setAmount(shoppingCart.getAmount());
             detail.setSale(saveSale);
-            this.DetailDaoImp.createDetail(detail);
+            this.detailDaoimp.createDetail(detail);
         }
-        this.shoppingCartService.cleanShoppingCart(client.getId());
+        this.shoppingCartDaoImp.cleanShoppingCart(client.getIdCustomer());
     }
 }

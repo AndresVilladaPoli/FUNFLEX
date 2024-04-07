@@ -1,25 +1,23 @@
-package main.java.funflex.demo.Models.Entity;
+package funflex.demo.Models.Entity;
 
-import funflex.demo.Models.Entity.Customer;
-import funflex.demo.Models.Entity.Product;
+import org.hibernate.annotations.GenericGenerator;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+//import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class ShoppingCart {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String Id;
 
     @ManyToOne(optional = false, cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Product product;
@@ -29,10 +27,10 @@ public class ShoppingCart {
 
     private int Amount;
     
-    public long getId() {
+    public String getId() {
         return Id;
     }
-    public void setId(long id) {
+    public void setId(String id) {
         Id = id;
     }
     public Product getProduct() {

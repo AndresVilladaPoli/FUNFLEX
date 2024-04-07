@@ -1,15 +1,17 @@
-package main.java.funflex.demo.Models.DAO;
+package funflex.demo.Models.DAO;
 
 import funflex.demo.Models.Entity.Detail;
-import funflex.demo.Models.DAO.IDetailDao;
+import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
+
 @Service
-//@Transactional
+@Transactional
 public class DetailDaoImp {
     
     private final IDetailDao iDetailDao;
@@ -19,11 +21,11 @@ public class DetailDaoImp {
         this.iDetailDao = iDetailDao;
     }
 
-    public void createDetail(){
+    public void createDetail(Detail detail){
         this.iDetailDao.save(detail);
     }
 
-    public List<main.java.funflex.demo.Models.Entity.Detail> getDetailBySale(long IdSale){
+    public List<Detail> getDetailBySale(String IdSale){
         return this.iDetailDao.findBySaleId(IdSale);
     }
 

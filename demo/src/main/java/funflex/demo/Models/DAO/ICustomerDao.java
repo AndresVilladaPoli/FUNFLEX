@@ -10,9 +10,11 @@ public interface ICustomerDao {
     
     public void save(Customer customer);
 
-    public Customer findOne(Long Id);
+    public Customer findOne(String IdCustomer);
 
-    public void delete(Long Id);
+    public Customer findByCustomerName(String Name);
+
+    public void delete(String IdCustomer);
 
      boolean login(CustomerLoginDTO customerLoginDTO);
 }

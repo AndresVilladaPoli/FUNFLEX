@@ -1,19 +1,18 @@
-package main.java.funflex.demo.Controllers;
+package funflex.demo.Controllers;
 
-import javax.validation.constraints.Null;
 import java.util.List;
-
-import main.java.funflex.demo.Models.Entity.Message;
-import main.java.funflex.demo.Models.Entity.Sale;
-import main.java.funflex.demo.Models.DAO.SaleDaoImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.*;
+
+import funflex.demo.Models.DAO.SaleDaoImp;
+import funflex.demo.Models.Entity.Message;
+import funflex.demo.Models.Entity.Sale;
 
 @Controller
 @RequestMapping("/sale")

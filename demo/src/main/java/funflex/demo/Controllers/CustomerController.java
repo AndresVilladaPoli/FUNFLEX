@@ -49,14 +49,14 @@ public class CustomerController{
     }
 
     @GetMapping("/formcustomer/{Id}")   
-    public String EditCustomer(@PathVariable(value = "Id") Long Id ,Model model)
+    public String EditCustomer(@PathVariable(value = "IdCustomer") String IdCustomer ,Model model)
     {
 
         Customer customer = null;
 
-        if(Id > 0)
+        if(IdCustomer != null)
         {
-            customer = customerDao.findOne(Id);
+            customer = customerDao.findOne(IdCustomer);
         }
         else
         {
@@ -71,11 +71,11 @@ public class CustomerController{
     }
 
     @GetMapping("/delete/{Id}")
-    public String DeleteCustomer(@PathVariable Long Id)
+    public String DeleteCustomer(@PathVariable String IdCustomer)
     {
-       if(Id>0)
+       if(IdCustomer != null)
        {
-         customerDao.delete(Id);
+         customerDao.delete(IdCustomer);
        }
 
        return "redirect:/listcustomer";
