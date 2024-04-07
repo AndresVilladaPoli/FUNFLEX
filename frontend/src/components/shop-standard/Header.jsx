@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import MegaMenuOne from "../common/header/mega-menu/MegaMenuOne";
 const Header = ({ className = "" }) => {
   const [navbar, setNavbar] = useState(false);
-
   const changeBackground = () => {
     if (window.scrollY >= 95) {
       setNavbar(true);
@@ -13,7 +12,7 @@ const Header = ({ className = "" }) => {
   };
 
   window.addEventListener("scroll", changeBackground);
-
+ 
   return (
     <header
       className={`theme-main-menu sticky-menu theme-menu-one ${
@@ -78,20 +77,26 @@ const Header = ({ className = "" }) => {
                 <span>login</span>
               </Link>
             </div>
-            <div className="login-btn">
-              
-              <Link
-                to="/sign-up-admin"
-                className="d-flex "
-              >
-                <img
-                  src={require("../../assets/images/icon/icon_03.svg").default}
+            <img
+                  src={require("../../assets/images/icon/icon_01.svg").default}
                   alt="icon"
                 />
-                <span>SignUp</span>
-
-              </Link>
-            </div>
+            <div className="login-btn">
+            
+      <button
+        className="dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+       
+<span>SignUp</span>    
+  </button>
+      <div className="dropdown-menu dropdown-menu-end">
+        <Link to="/sign-up-admin" className="dropdown-item">Admin</Link>
+        <Link to="/sign-up-client" className="dropdown-item">Client</Link>
+      </div>
+    </div>
 
           </div>
         </div>

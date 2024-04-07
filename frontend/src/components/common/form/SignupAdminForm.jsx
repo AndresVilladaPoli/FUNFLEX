@@ -7,11 +7,9 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState(false);
   const confirmPasswordHandler = () => setConfirmPassword(!confirmPassword);
 
-  const [documentTypeOpen, setDocumentTypeOpen] = useState(false);
 
-  const toggleDocumentTypeDropdown = () => {
-    setDocumentTypeOpen(!documentTypeOpen);
-  };
+
+ 
   return (
     <form>
       <div className="row">
@@ -42,43 +40,23 @@ const Signup = () => {
           </div>
         </div>
 
-       <div className="col-12">
-          <div className="input-group-meta mb-30">
-            <label>Document Type*</label>
-            <div className="dropdown">
-              <button
-                className="btn btn-secondary dropdown-toggle form-control" // Aplique la clase form-control aquí
-                type="button"
-                onClick={toggleDocumentTypeDropdown}
-              >
-                Select a document type
-              </button>
-              <ul
-                className={`dropdown-menu${documentTypeOpen ? " show" : ""}`}
-              >
-                <li>
-                  <a className="dropdown-item" href="#">
-                    <select className="form-control" required> {/* Aplique la clase form-control aquí */}
-                      <option value="">Select a document type</option>
-                      <option value="passport">Passport</option>
-                      <option value="id_card">ID Card</option>
-                      <option value="driver_license">Driver's License</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </a>
-                </li>
-              </ul>
-              <span className="placeholder_icon" onClick={toggleDocumentTypeDropdown}>
-                <span>
-                  <img
-                    src={require("../../../assets/images/icon/icon_67.svg").default}
-                    alt="icon"
-                  />
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
+        <div className="col-12">
+  <div className="input-group-meta mb-30">
+    <label>Document Type*</label>
+    <div className="dropdown">
+      <div class="custom-dropdown">
+        <select className="form-control" required>
+          <option value="">Select a document type</option>
+          <option value="passport">Passport</option>
+          <option value="id_card">ID Card</option>
+          <option value="driver_license">Driver's License</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="arrow-down"></div>
+      </div>
+    </div>
+  </div>
+</div>
         
 
         <div className="col-12">
