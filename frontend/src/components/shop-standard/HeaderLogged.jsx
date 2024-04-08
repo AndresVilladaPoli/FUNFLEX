@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MegaMenuOne from "../common/header/mega-menu/MegaMenuOne";
+import MegaMenuOne from "../common/header/mega-menu/MegaMenuOneClient";
 const HeaderLogged = ({ className = "" }) => {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -22,7 +22,7 @@ const HeaderLogged = ({ className = "" }) => {
       <div className="inner-content">
         <div className="d-flex align-items-center justify-content-between">
           <div className="logo">
-            <Link to="/">
+            <Link to="/client">
               <img
                 src={require("../../assets/images/logo/funflexnegro.png")}
                 alt="brand"
@@ -55,7 +55,7 @@ const HeaderLogged = ({ className = "" }) => {
           <div className="cart">
               
               <Link
-                to="/cart"
+                to="/cart-client"
                 className="d-flex "
               >
                 <img
@@ -64,18 +64,29 @@ const HeaderLogged = ({ className = "" }) => {
                 />
               </Link>
             </div>
-            <div className="d-none d-sm-block">
-              
-              <Link
-                to="/"
-                className="d-flex align-items-center login-btn"
-              >
-                <img
+            <img
                   src={require("../../assets/images/icon/icon_01.svg").default}
                   alt="icon"
                 />
-                <span>Profile</span>
-              </Link>
+            <div className="d-none d-sm-block">
+           
+            <div className="login-btn">
+            
+            <button
+              className="dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+             
+      <span>Profile </span>    
+        </button>
+            <div className="dropdown-menu dropdown-menu-end">
+              <Link to="" className="dropdown-item">Edit profile</Link>
+              <Link to="/history" className="dropdown-item">Shopping history</Link>
+            </div>
+          </div>
+      
             </div>
 
             <div className="login-btn">
