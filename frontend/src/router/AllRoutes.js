@@ -13,7 +13,7 @@ import LandingClient from "../pages/home-pages/LandingClient";
 import CartClient from "../pages/inner-pages/shop/shop-elements/CartClient";
 import PortfolioV11Client from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV11Client";
 import DynamicProductDetailsLogged from "../pages/inner-pages/shop/shop-elements/DynamicProductDetailsLogged";
-
+import PortfolioV11Admin from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV1Admin";
 const AllRoutes = () => {
   return (
     <>
@@ -26,6 +26,8 @@ const AllRoutes = () => {
         <Route path="/client" element={<LandingClient />} />
         <Route path="/cart-client" element={<CartClient />} />
         <Route path="/products-client" element={<PortfolioV11Client />} />
+        <Route path="/admin" element={<PortfolioV11Admin />} />
+
 
 
 

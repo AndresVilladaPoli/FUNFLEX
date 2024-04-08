@@ -1293,3 +1293,33 @@ body .theme-btn-one img {
   border-right: 5px solid transparent;
   border-top: 5px solid gray; 
 }
+
+
+.theme-btn-add{
+  font-family: "gorditamedium";
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 38px;
+  text-align: center;
+  line-height: 55px;
+  background: #5FA1C6;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  left: 700px;
+  bottom: 25px;
+}
+
+.icon-container {
+  margin-left: 120px; 
+}
+.price-and-icons-container {
+  display: flex;
+  align-items: center; /* Alinear verticalmente */
+}
+.icon-container img {
+  width: 40px; 
+  height: 40px; 
+}

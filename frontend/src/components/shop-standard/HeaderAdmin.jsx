@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MegaMenuOne from "../common/header/mega-menu/MegaMenuOneClient";
-const HeaderLogged = ({ className = "" }) => {
+import MegaMenuOne from "../common/header/mega-menu/MegaMenuOneAdmin";
+const HeaderAdmin = ({ className = "" }) => {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 95) {
@@ -102,4 +102,4 @@ const HeaderLogged = ({ className = "" }) => {
   );
 };
 
-export default HeaderLogged;
+export default HeaderAdmin;
