@@ -44,7 +44,7 @@ const ProductV1 = () => {
               <div className="price-and-icons-container">
     <div className="price">${item.price} COP</div>
     <div className="icon-container">
-        <Link> 
+        <Link to={`/edit-product/${item.id}`}> 
             <img src={require("../../../../assets/images/icon/edit.svg").default} alt="icon" />
         </Link>
  <span>  </span>
