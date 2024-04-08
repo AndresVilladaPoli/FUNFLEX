@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import useProducts from "../../../../hooks/use-products";
 
 const ProductV1 = () => {
-  const { products } = useProducts();
+  const { products, deleteProduct } = useProducts();
   const productItems = products.filter((prd) => prd.product_v1);
  
+  const handleDelete = (productId) => {
+    deleteProduct(productId); 
+  };
   return (
     <>
       {productItems.map((item) => (
@@ -46,7 +49,7 @@ const ProductV1 = () => {
         </Link>
  <span>  </span>
 
-        <Link > 
+        <Link onClick={() => handleDelete(item.id)} > 
             <img src={require("../../../../assets/images/icon/trash.svg").default} alt="icon" />
         </Link>
     </div>
