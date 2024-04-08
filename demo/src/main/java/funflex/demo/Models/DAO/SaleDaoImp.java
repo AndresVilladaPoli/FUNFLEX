@@ -7,11 +7,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Date;
 
-import funflex.demo.Models.DAO.CustomerDaoImp;
 import funflex.demo.Models.Entity.ShoppingCart;
 import funflex.demo.Models.Entity.Detail;
 import funflex.demo.Models.Entity.Sale;
-import funflex.demo.Models.DAO.ISaleDao;
 import funflex.demo.Models.Entity.Customer;
 
 import org.springframework.beans.factory.annotation.Autowired;

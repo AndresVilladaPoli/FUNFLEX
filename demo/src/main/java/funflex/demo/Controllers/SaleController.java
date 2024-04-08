@@ -39,7 +39,7 @@ public class SaleController {
                     .getPrincipal();
         String userName = userDetails.getUsername();
         this.saleDaoImp.createSale(userName);
-        return new ResponseEntity<>(new Message("Compra exitosa"), HttpStatus.OK);
+        return new ResponseEntity<>(new Message("Successfully purchased"), HttpStatus.OK);
     }
     
 }

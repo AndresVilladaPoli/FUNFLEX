@@ -47,15 +47,15 @@ public class ShoppingCartController {
     public ResponseEntity<Message> addProduct(@Validated @RequestBody ShoppingCart shoppingCart,
                                               BindingResult bindingResult){
         if (bindingResult.hasErrors())
-            return new ResponseEntity<>(new Message("Revise los campos"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new Message("Review the fields"),HttpStatus.BAD_REQUEST);
         this.shoppingCartDaoImp.addProduct(shoppingCart);
-        return new ResponseEntity<>(new Message("Producto agregado"),HttpStatus.OK);
+        return new ResponseEntity<>(new Message("Product added"),HttpStatus.OK);
     }
 
     @DeleteMapping("/clean/{IdItem}")
     public ResponseEntity<Message> removeProduct(@PathVariable("IdItem")String IdProduct){
         this.shoppingCartDaoImp.removeProduct(IdProduct);
-        return new ResponseEntity<>(new Message("Eliminado"),HttpStatus.OK);
+        return new ResponseEntity<>(new Message("Successfully removed"),HttpStatus.OK);
     }
     
 
