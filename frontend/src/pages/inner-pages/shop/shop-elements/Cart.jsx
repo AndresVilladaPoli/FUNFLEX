@@ -21,7 +21,7 @@ const Cart = () => {
         <div className="container">
           {cartItems.length === 0 && (
             <div className="d-flex align-items-center justify-content-center">
-              <div>
+              <div className="justify-content-center">
                 <h3>Your cart is empty</h3>
                 <Link to="/products" className="theme-btn-seven mt-25">
                   Return to shop
@@ -41,7 +41,7 @@ const Cart = () => {
                 <div className="cart-total-section d-flex flex-column sm-pt-40">
                   <CartTotal />
                   <Link
-                    to="/"
+                    to="/sign-in"
                     className="theme-btn-seven checkout-process mt-30"
                   >
                     BUY

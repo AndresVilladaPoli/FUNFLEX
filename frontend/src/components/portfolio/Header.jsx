@@ -56,7 +56,7 @@ const Header = ({ className = "" }) => {
           <div className="cart">
               
               <Link
-                to="/"
+                to="/cart"
                 className="d-flex "
               >
                 <img
