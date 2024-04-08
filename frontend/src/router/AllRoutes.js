@@ -9,6 +9,7 @@ import History from "../pages/inner-pages/shop/shop-elements/History";
 import NotFound from "../pages/NotFound";
 import SignIn from "../pages/inner-pages/shop/shop-elements/SignIn";
 import SignUpAdmin from "../pages/inner-pages/shop/shop-elements/SignUpAdmin";
+import SignUpClient from "../pages/inner-pages/shop/shop-elements/signUpClient"
 import LandingClient from "../pages/home-pages/LandingClient";
 import CartClient from "../pages/inner-pages/shop/shop-elements/CartClient";
 import PortfolioV11Client from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV11Client";
@@ -47,6 +48,7 @@ const AllRoutes = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up-admin" element={<SignUpAdmin />} />
+        <Route path="/sign-up-client" element={<SignUpClient />} />
 
       </Routes>
     </>
