@@ -23,7 +23,7 @@ const CartClient = () => {
             <div className="d-flex align-items-center justify-content-center">
               <div>
                 <h3>Your cart is empty</h3>
-                <Link to="/products" className="theme-btn-seven mt-25">
+                <Link to="/products-client" className="theme-btn-seven mt-25">
                   Return to shop
                 </Link>
               </div>

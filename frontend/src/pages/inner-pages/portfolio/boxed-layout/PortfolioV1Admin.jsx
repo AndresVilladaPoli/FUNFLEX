@@ -8,7 +8,7 @@ import ProductFilteringV1 from "../../shop/components/ProductFilteringV1";
 import ProductV1 from "../../shop/components/ProductV1Logged";
 import HeaderLogged from "../../../../components/shop-standard/HeaderLogged";
 
-const PortfolioV11Client = () => {
+const PortfolioV11Admin = () => {
   return (
     <div className="main-page-wrapper">
       <Seo title="Products" />
@@ -73,4 +73,4 @@ const PortfolioV11Client = () => {
     </div>
   );
 };
-export default PortfolioV11Client;
+export default PortfolioV11Admin;
