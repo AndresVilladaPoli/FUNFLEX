@@ -8,8 +8,12 @@ import SingleCart from "./components/cart/SingleCart";
 import Seo from "../../../../components/common/seo/Seo";
 import HeaderLogged from "../../../../components/shop-standard/HeaderLogged";
 
+
 const CartClient = () => {
   const cartItems = useSelector(cartProduct);
+  const handleClick = () => {
+    alert('¡Realizaste tu compra con éxito!');
+  };
   return (
     <div className="main-page-wrapper">
       <Seo title="Cart" />
@@ -40,12 +44,11 @@ const CartClient = () => {
 
                 <div className="cart-total-section d-flex flex-column sm-pt-40">
                   <CartTotal />
-                  <Link
-                    to="/client"
+                  <button onClick={handleClick}
                     className="theme-btn-seven checkout-process mt-30"
                   >
                     BUY
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
