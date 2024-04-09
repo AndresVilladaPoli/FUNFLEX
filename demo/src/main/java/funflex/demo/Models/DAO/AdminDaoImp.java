@@ -8,6 +8,7 @@ import funflex.demo.Controllers.LoginController.AdminLoginDTO;
 import funflex.demo.Models.Entity.Admin;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 @Repository
 
@@ -18,7 +19,7 @@ public class AdminDaoImp implements IAdminDao{
     private EntityManager em;
 
     @SuppressWarnings("unchecked")
-    //@Transactional(readOnly = true)
+    @Transactional
     @Override
     public List<Admin> findAll() 
     { 
@@ -26,7 +27,7 @@ public class AdminDaoImp implements IAdminDao{
     }
 
     @Override
-    //@Transactional
+    @Transactional
     public void save(Admin admin)
     {
         if(admin.getIdAdmin() != null && admin.getIdAdmin() > 0)
@@ -42,7 +43,7 @@ public class AdminDaoImp implements IAdminDao{
 
 
     @Override
-    //@Transactional(readOnly = true)
+    @Transactional
     public Admin findOne(Long IdAdmin) {
 
 
@@ -52,7 +53,7 @@ public class AdminDaoImp implements IAdminDao{
     }
 
     @Override
-    //@Transactional
+    @Transactional
     public void delete(Long IdAdmin) {
       
       Admin admin = findOne(IdAdmin);
