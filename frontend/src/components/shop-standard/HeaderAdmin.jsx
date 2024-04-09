@@ -71,7 +71,7 @@ const HeaderAdmin = ({ className = "" }) => {
       <span>Admin </span>    
         </button>
             <div className="dropdown-menu dropdown-menu-end">
-              <Link to="" className="dropdown-item">Edit profile</Link>
+              <Link to="/edit-admin" className="dropdown-item">Edit profile</Link>
               <Link to="/update-catalog" className="dropdown-item">Update catalog</Link>
             </div>
           </div>

@@ -1321,9 +1321,39 @@ body .theme-btn-one img {
 }
 .price-and-icons-container {
   display: flex;
-  align-items: center; /* Alinear verticalmente */
+  align-items: center; 
 }
 .icon-container img {
   width: 40px; 
   height: 40px; 
+}
+.illustration-holderadd {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+  margin-bottom: 20px;
+  flex-direction: column; 
+   
+  
+}
+.illustration-holderadd img.add {
+  width: 250px; 
+  height: 250px; 
+}
+.illustration-holderadd img:not(.add) {
+  width: 60px; 
+  height: 60px; 
+}
+
+.edit-and-upload {
+  display: flex;
+  align-items: center;
+  font-family: "gorditamedium";
+}
+.upload-photo {
+  position: absolute; 
+  margin-top: 80px;
+  left: 0px;
+  right:900px;
 }
