@@ -15,6 +15,7 @@ import CartClient from "../pages/inner-pages/shop/shop-elements/CartClient";
 import PortfolioV11Client from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV11Client";
 import DynamicProductDetailsLogged from "../pages/inner-pages/shop/shop-elements/DynamicProductDetailsLogged";
 import PortfolioV11Admin from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV1Admin";
+import AddProduct from "../pages/inner-pages/shop/shop-elements/AddProduct";
 const AllRoutes = () => {
   return (
     <>
@@ -49,6 +50,8 @@ const AllRoutes = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up-admin" element={<SignUpAdmin />} />
         <Route path="/sign-up-client" element={<SignUpClient />} />
+        <Route path="/add-product" element={<AddProduct />} />
+
 
       </Routes>
     </>

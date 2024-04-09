@@ -24,7 +24,7 @@ const PortfolioV11Admin = () => {
       </div>
       <div className="product-section-four mt-150 lg-mt-90">
       <div className="container" style={{marginRight:'0px'}}>
-            <Link to="/admin"><button
+            <Link to="/add-product"><button
                     type="button"
                     className="theme-btn-add"
                   >
