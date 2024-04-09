@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import img1 from "../../../../assets/images/icon/add.svg";
 import Add from "../../../../components/common/form/AddProduct";
 import Seo from "../../../../components/common/seo/Seo";

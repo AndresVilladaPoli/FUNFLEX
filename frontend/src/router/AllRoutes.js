@@ -15,11 +15,9 @@ import CartClient from "../pages/inner-pages/shop/shop-elements/CartClient";
 import PortfolioV11Client from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV11Client";
 import DynamicProductDetailsLogged from "../pages/inner-pages/shop/shop-elements/DynamicProductDetailsLogged";
 import PortfolioV11Admin from "../pages/inner-pages/portfolio/boxed-layout/PortfolioV1Admin";
-<<<<<<< HEAD
 import AddProduct from "../pages/inner-pages/shop/shop-elements/AddProduct";
-=======
 import EditProduct from "../pages/inner-pages/shop/shop-elements/edit-product";
->>>>>>> 83da90861e71b6b3ddae02c6f4259aeea577fb63
+import EditAdmin from "../pages/inner-pages/shop/shop-elements/EditAdminProfile";
 const AllRoutes = () => {
   return (
     <>
@@ -55,6 +53,8 @@ const AllRoutes = () => {
         <Route path="/sign-up-admin" element={<SignUpAdmin />} />
         <Route path="/sign-up-client" element={<SignUpClient />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/edit-admin" element={<EditAdmin />} />
+
 
 
       </Routes>
