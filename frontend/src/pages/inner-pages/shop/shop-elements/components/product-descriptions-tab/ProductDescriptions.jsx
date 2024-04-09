@@ -9,9 +9,8 @@ const ProductDescriptions = ({ productId }) => {
   if (!product) {
     return <p>No se encontró el producto.</p>;
   }
-  const { detailedDescription, technicalInfo } = product;
 
-  // Si se encuentra el producto, mostrar la descripción detallada y la información técnica
+  // Mostrar la descripción detallada y la información técnica
   return (
     <>
       <ul className="nav nav-tabs" role="tablist">
@@ -46,7 +45,7 @@ const ProductDescriptions = ({ productId }) => {
           <div className="row gx-5">
             <div className="col-xl-6">
               <h5>Description detail:</h5>
-              <p>{detailedDescription}</p>
+              <p>{product.detailedDescription}</p>
             </div>
           </div>
         </div>
@@ -54,14 +53,8 @@ const ProductDescriptions = ({ productId }) => {
         <div className="tab-pane fade" id="item2" role="tabpanel">
           <div className="row gx-5">
             <div className="col-xl-6">
-              <h5>Specification:</h5>
-              <ul className="style-none product-feature">
-                {Object.entries(technicalInfo).map(([key, value]) => (
-                  <li key={key}>
-                    <strong>{key}:</strong> {value}
-                  </li>
-                ))}
-              </ul>
+              <h5>Technical Info:</h5>
+              <p>{product.technicalInfo}</p>
             </div>
           </div>
         </div>
