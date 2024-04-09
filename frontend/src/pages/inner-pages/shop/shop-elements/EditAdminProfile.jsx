@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "../../../../assets/images/icon/profile.svg";
 import Seo from "../../../../components/common/seo/Seo";
 import HeaderAdmin from "../../../../components/shop-standard/HeaderAdmin";
+import EditAdminForm from "../../../../components/common/form/EditAdminProfile";
 
 const EditAdmin = () => {
   
@@ -28,7 +29,7 @@ const EditAdmin = () => {
 
           <div className="user-data-form mt-80 lg-mt-50">
             <h2 className="font-recoleta">Edit administrator profile</h2>
-            {/* <EditAdminForm/> */}
+            <EditAdminForm/>
           </div>
         </div>
       </div>
