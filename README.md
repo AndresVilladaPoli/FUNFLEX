@@ -58,8 +58,38 @@ And a customer service chat to resolve your doubts.
 ![Image text](README_IMG/Schema.PNG)
 
 
+- Open the Git Bash console.
+- Use the `cd` command to navigate to your desktop and press enter.
+```bash
+  $ cd Desktop/
+```
+- Copy and paste the following command to clone the repository from GitHub: `git clone https://github.com/AndresVilladaPoli/FUNFLEX.git`
+
+- Navigate to the frontend directory within the cloned directory.
+```bash
+  $ cd frontend/
+```
+- Run the `npm install` command to install Node.js dependencies
+```bash
+  $ npm install
+```
+- Then, return to the main directory
+```bash
+  $ cd ..
+```
+
+    
+## Development Approach
+
+We followed the traditional methodology for coding. For the frontend development, we utilized React.js framework, while for the backend, Spring Boot was employed. Additionally, Visual Studio Code was the IDE used for development.
 
 
+## Resources
+We utilized the following resources throughout the project
+- [Bootstrap icons](https://icons.getbootstrap.com)
+- [Font Awesome](https://fontawesome.com)
+- [Font Squirrel](https://www.fontsquirrel.com)
+- [Google Fonts API](https://fonts.google.com)
 
 
 ## Authors ✒️
