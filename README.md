@@ -1,11 +1,38 @@
-# Fun Flex  
+# FunFlex Entertainment  
 
 
 # <div align=center><a href="#"><img src="README_IMG/FunflexLogo.png" height=300px></a></div>
 
 
 
-FUN FLEX is an E-Commerce project specialized in the sale of digital entertainment products, such as video games, game consoles, game accessories, movies, music and e-books. We also offer a diverse selection of downloadable digital content and physical products related to entertainment.
+FunFlex Entertainment is an eCommerce platform offering a wide range of digital entertainment, including movies, music, books, and video games. Its impact lies in facilitating universal access to quality content, promoting the dissemination of art and culture, contributing to environmental sustainability by providing digital media, and supporting the creative industry. The reasons for its existence stem from the growing demand for digital entertainment, the convenience and variety it provides in a single platform, the personalized experience it offers users, and its ability to adapt to current digital trends.
+
+## Table of Contents
+1. Introduction
+2. Screenshots
+3. How to install
+4. Technologies Used
+5. Resources
+6. Authors
+
+## Introduction
+FunFlex Entertainment is an innovative eCommerce platform designed to revolutionize how users access and enjoy digital entertainment. Offering a wide variety of multimedia content including movies, music, books, and video games, our platform stands out for its user-friendly interface, personalized recommendations, and commitment to providing diverse and high-quality content. With an extensive library of entertainment options spanning various genres and formats, users can easily explore and discover new favorites.
+
+Our platform provides seamless access to digital entertainment, allowing users to enjoy their favorite media anytime, anywhere, and on any device. Additionally, FunFlex Entertainment enhances the user experience by offering a customer advisory chat feature, enabling users to receive real-time assistance and recommendations from our knowledgeable staff. This fosters a vibrant community of entertainment enthusiasts, offering forums, reviews, and social features to facilitate interaction and discussion. We prioritize the security and privacy of our users, implementing robust measures to ensure secure transactions.
+
+Committed to staying at the forefront of digital entertainment trends, we regularly update our platform with new features and content to enhance the user experience. FunFlex Entertainment redefines how users interact with digital entertainment, offering a comprehensive and immersive platform that caters to the diverse preferences of modern audiences.
+## Screenshots
+
+![Login](README_IMG/login.png)
+
+We offer a wide variety of products.
+
+![Products](README_IMG/products.png)
+![Products Details](README_IMG/details.png)
+
+And a customer service chat to resolve your doubts.
+
+![Chat](README_IMG/chat.png)
 
 ## How to Install
 
@@ -36,7 +63,7 @@ FUN FLEX is an E-Commerce project specialized in the sale of digital entertainme
 
 ## Authors ✒️
 
-* **Andrea Álvarez Posada** - *Developer*
-* **Mateo Echeverri Jiménez** - *Developer*
-* **Dayron Restrepo Pérez** - *Developer*
-* **Andrés Ricardo Villada Marín** - *Developer*
+- [Andrea Alvarez Posada](https://github.com/andreaalpo)
+- [Dayron Restrepo Perez](https://github.com/DayronR12)
+- [Mateo Echeverri Jiménez](https://github.com/Mateo8888)
+- [Andrés Ricardo Villada Marín](https://github.com/AndresVilladaPoli)
