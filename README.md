@@ -23,16 +23,17 @@ Our platform provides seamless access to digital entertainment, allowing users t
 Committed to staying at the forefront of digital entertainment trends, we regularly update our platform with new features and content to enhance the user experience. FunFlex Entertainment redefines how users interact with digital entertainment, offering a comprehensive and immersive platform that caters to the diverse preferences of modern audiences.
 ## Screenshots
 
-![Login](README_IMG/login.png)
+![Login](README_IMG/login.PNG)
 
 We offer a wide variety of products.
 
-![Products](README_IMG/products.png)
-![Products Details](README_IMG/details.png)
+![Products](README_IMG/products.PNG)
+![Products Details](README_IMG/details.PNG)
 
 And a customer service chat to resolve your doubts.
 
-![Chat](README_IMG/chat.png)
+![Chat](README_IMG/chat.PNG)
+
 
 ## How to Install
 
