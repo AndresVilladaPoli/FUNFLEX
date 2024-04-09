@@ -1,6 +1,16 @@
 import React from "react";
+import products from "../single-product/ProductsData";
 
-const ProductDescriptions = () => {
+const ProductDescriptions = ({ productId }) => {
+  // Busca el producto correspondiente según el productId
+  const product = products.find((p) => p.id === productId);
+
+  // Si no se encuentra el producto, mostrar un mensaje de error
+  if (!product) {
+    return <p>No se encontró el producto.</p>;
+  }
+
+  // Mostrar la descripción detallada y la información técnica
   return (
     <>
       <ul className="nav nav-tabs" role="tablist">
@@ -35,10 +45,7 @@ const ProductDescriptions = () => {
           <div className="row gx-5">
             <div className="col-xl-6">
               <h5>Description detail:</h5>
-              <p>
-              
-The PlayStation 5 (PS5) is the latest video game console developed by Sony Interactive Entertainment. Released in November 2020, the PS5 represents a significant leap in terms of power, performance, and features compared to its predecessor, the PlayStation 4.
-              </p>
+              <p>{product.detailedDescription}</p>
             </div>
           </div>
         </div>
@@ -46,39 +53,8 @@ The PlayStation 5 (PS5) is the latest video game console developed by Sony Inter
         <div className="tab-pane fade" id="item2" role="tabpanel">
           <div className="row gx-5">
             <div className="col-xl-6">
-              <h5>Specification:</h5>
-              <ul className="style-none product-feature">
-                <li>
-                  <strong>CPU:</strong> Custom AMD Ryzen Octa-core.
-                </li>
-                <li>
-                <strong>GPU:</strong> Custom RDNA 2 with ray tracing.
-                </li>
-                <li>
-                <strong>Memory:</strong> 8GB GDDR6 RAM.
-                </li>
-                <li>
-                <strong>Storage:</strong> Various configurations.
-                </li>
-                <li>
-                <strong>Optical Drive:</strong> 4K UHD Blu-ray.
-                </li>
-                <li>
-                <strong>Connectivity:</strong> Wi-Fi 6, Bluetooth 5.1, USB ports.
-                </li>
-                <li>
-                <strong>Audio:</strong> Tempest 3D AudioTech.
-                </li>
-                <li>
-                <strong>Resolution:</strong> 4K gaming support.
-                </li>
-                <li>
-                <strong>Controller:</strong> DualSense wireless.
-                </li>
-                <li>
-                <strong>Compatibility:</strong> Supports a wide range of PS4 games.
-                </li>
-              </ul>
+              <h5>Technical Info:</h5>
+              <p>{product.technicalInfo}</p>
             </div>
           </div>
         </div>

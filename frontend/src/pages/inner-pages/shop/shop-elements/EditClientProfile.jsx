@@ -1,35 +1,28 @@
 import React from "react";
 import img1 from "../../../../assets/images/icon/profile.svg";
 import Seo from "../../../../components/common/seo/Seo";
-import HeaderAdmin from "../../../../components/shop-standard/HeaderAdmin";
-import EditAdminForm from "../../../../components/common/form/EditAdminProfile";
+import HeaderLogged from "../../../../components/shop-standard/HeaderLogged";
+import EditClientForm from "../../../../components/common/form/EditClientProfile";
 
-const EditAdmin = () => {
+const EditClient = () => {
   
-
-  
-
   return (
     <>
-      <Seo title="Edit Profile Admin" />
-      <HeaderAdmin />
+      <Seo title="Edit Profile" />
+      <HeaderLogged />
 
       <div className="user-data-page clearfix d-md-flex">
         <div className="illustration-wrapper d-none d-md-flex align-items-center justify-content-between flex-column">
           <div className="illustration-holderadd">
-            <img src={img1} alt="icon" className="add" />
-         
-           
-            
+            <img src={img1} alt="icon" className="add" /> 
           </div>
         </div>
 
         <div className="form-wrapper">
           
-
           <div className="user-data-form mt-80 lg-mt-50">
-            <h2 className="font-recoleta">Edit administrator profile</h2>
-            <EditAdminForm/>
+            <h2 className="font-recoleta">Edit customer profile</h2>
+            <EditClientForm/>
           </div>
         </div>
       </div>
@@ -37,4 +30,4 @@ const EditAdmin = () => {
   );
 };
 
-export default EditAdmin;
+export default EditClient;

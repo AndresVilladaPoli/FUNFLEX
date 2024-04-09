@@ -82,7 +82,7 @@ const HeaderLogged = ({ className = "" }) => {
       <span>Profile </span>    
         </button>
             <div className="dropdown-menu dropdown-menu-end">
-              <Link to="" className="dropdown-item">Edit profile</Link>
+              <Link to="/edit-client" className="dropdown-item">Edit profile</Link>
               <Link to="/history" className="dropdown-item">Shopping history</Link>
             </div>
           </div>

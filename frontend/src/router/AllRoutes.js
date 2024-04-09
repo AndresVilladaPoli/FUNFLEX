@@ -18,6 +18,8 @@ import PortfolioV11Admin from "../pages/inner-pages/portfolio/boxed-layout/Portf
 import AddProduct from "../pages/inner-pages/shop/shop-elements/AddProduct";
 import EditProduct from "../pages/inner-pages/shop/shop-elements/edit-product";
 import EditAdmin from "../pages/inner-pages/shop/shop-elements/EditAdminProfile";
+import EditClient from "../pages/inner-pages/shop/shop-elements/EditClientProfile";
+
 const AllRoutes = () => {
   return (
     <>
@@ -54,7 +56,7 @@ const AllRoutes = () => {
         <Route path="/sign-up-client" element={<SignUpClient />} />
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/edit-admin" element={<EditAdmin />} />
-
+        <Route path="/edit-client" element={<EditClient />} />
 
 
       </Routes>
