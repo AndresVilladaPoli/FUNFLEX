@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EditAdminForm = () => {
   const [password, setPassword] = useState(false);
@@ -6,10 +7,10 @@ const EditAdminForm = () => {
 
   const [confirmPassword, setConfirmPassword] = useState(false);
   const confirmPasswordHandler = () => setConfirmPassword(!confirmPassword);
+  const handleClick = () => {
+    alert("¡Edited customer data!");
+  };
 
-
-
- 
   return (
     <form>
       <div className="row">
@@ -73,10 +74,10 @@ const EditAdminForm = () => {
         </div>
 
         <div className="col-12">
-          <button className="theme-btn-one w-100 mt-50 mb-50">UPDATE</button>
+          <button onClick={handleClick} className="theme-btn-one w-100 mt-50 mb-50">UPDATE</button>
         </div>
         <div className="col-12">
-          <button className="theme-btn-one w-100 mt-5 mb-50">CANCEL</button>
+        <Link to="/client" className="theme-btn-one w-100 mb-50">CANCEL</Link>
         </div>
       </div>
     </form>
