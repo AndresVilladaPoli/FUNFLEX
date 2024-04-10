@@ -73,9 +73,9 @@ And a customer service chat to resolve your doubts.
 ```bash
   $ npm install
 ```
-- Then, return to the main directory
+- Then, run the command `npm start` to start the frontend
 ```bash
-  $ cd ..
+  $ npm start
 ```
 
     
