@@ -33,7 +33,7 @@ const AllRoutes = () => {
         <Route path="/cart-client" element={<CartClient />} />
         <Route path="/products-client" element={<PortfolioV11Client />} />
         <Route path="/admin" element={<PortfolioV11Admin />} />
-        <Route path="/edit-product" element={<EditProduct />} />
+        <Route path="/edit-product/:id" element={<EditProduct />} />
 
 
 
