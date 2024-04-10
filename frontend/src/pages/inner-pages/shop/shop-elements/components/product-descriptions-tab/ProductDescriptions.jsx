@@ -7,6 +7,13 @@ const ProductDescriptions = ({ productId }) => {
   const product = products.find((p) => p.id === productIdNumber);
 
 
+  // Verifica si se encontró el producto
+ 
+
+  // Extrae la información del producto
+  const { detailedDescription, technicalInfo } = product;
+
+  // Mostrar la descripción detallada y la información técnica
   return (
     <>
       <ul className="nav nav-tabs" role="tablist">
@@ -41,7 +48,7 @@ const ProductDescriptions = ({ productId }) => {
           <div className="row gx-5">
             <div className="col-xl-6">
               <h5>Description detail:</h5>
-              <p>{product.detailedDescription}</p>
+              <p>{detailedDescription}</p>
             </div>
           </div>
         </div>
@@ -50,7 +57,7 @@ const ProductDescriptions = ({ productId }) => {
           <div className="row gx-5">
             <div className="col-xl-6">
               <h5>Technical Info:</h5>
-              <p>{product.technicalInfo}</p>
+              <p>{technicalInfo}</p>
             </div>
           </div>
         </div>
