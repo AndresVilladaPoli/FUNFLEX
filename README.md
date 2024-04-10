@@ -61,6 +61,8 @@ And a customer service chat to resolve your doubts.
 
 
 To initialize the 'backend' of the project, we need to go to the DemoApplication file (located in demo\src\main\java\funflex\demo) and run
+
+
 ![Image text](README_IMG/DemoApplication.PNG)
 
 
