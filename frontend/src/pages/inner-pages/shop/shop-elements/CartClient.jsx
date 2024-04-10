@@ -14,7 +14,7 @@ const CartClient = () => {
   const dispatch = useDispatch(); 
 
   const handleClick = () => {
-    alert('¡Realizaste tu compra con éxito!');
+    alert('¡You made your purchase successfully!');
     dispatch(add_to_history(cartItems)); // Agregar productos al historial de compras
     dispatch(clear_cart()); // Vaciar el carrito después de la compra
   };

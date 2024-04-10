@@ -10,6 +10,9 @@ import Seo from "../../../../components/common/seo/Seo";
 
 const Cart = () => {
   const cartItems = useSelector(cartProduct);
+  const handleClick = () => {
+    alert('To buy you must log in.');
+  };
   return (
     <div className="main-page-wrapper">
       <Seo title="Cart" />
@@ -40,12 +43,11 @@ const Cart = () => {
 
                 <div className="cart-total-section d-flex flex-column sm-pt-40">
                   <CartTotal />
-                  <Link
-                    to="/login"
-                    className="theme-btn-seven checkout-process mt-30"
-                  >
+                  <button onClick={handleClick}
+                    className="theme-btn-seven checkout-process mt-30">
+
                     BUY
-                  </Link>
+                </button>
                 </div>
               </div>
             </div>
