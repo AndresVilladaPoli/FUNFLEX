@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CopyrightFooter from "../../../../components/common/footer/CopyrightFooter";
 import { Link } from "react-router-dom";
 import Pagination from "../../shop/components/Pagination";
@@ -7,8 +7,39 @@ import Seo from "../../../../components/common/seo/Seo";
 import ProductFilteringV1 from "../../shop/components/ProductFilteringV1";
 import ProductV1 from "../../shop/components/ProductV1Logged";
 import HeaderLogged from "../../../../components/shop-standard/HeaderLogged";
+import useProducts from "../../../../hooks/use-products";
+
 
 const PortfolioV11Client = () => {
+  const { products } = useProducts();
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [categories, setCategories] = useState([]);
+
+  // Extracting unique categories for filtering options
+  useEffect(() => {
+    const uniqueCategories = [...new Set(products.map(product => product.category))];
+    setCategories(uniqueCategories);
+  }, [products]);
+
+  const handleFilter = (category, price) => {
+    let updatedProducts = products;
+
+    if (category !== "All") {
+      updatedProducts = updatedProducts.filter(product => product.category === category);
+
+    }
+
+    if (price !== "All") {
+      if (price === "<100") {
+        updatedProducts = updatedProducts.filter(product => product.price < 100);
+      } else if (price === ">100") {
+        updatedProducts = updatedProducts.filter(product => product.price >= 100);
+      }
+    }
+
+    setFilteredProducts(updatedProducts);
+  };
+
   return (
     <div className="main-page-wrapper">
       <Seo title="Products" />
@@ -33,12 +64,17 @@ const PortfolioV11Client = () => {
       <div className="product-section-four mt-150 lg-mt-90">
         <div className="container">
           <div className="shop-page-header d-lg-flex align-items-center justify-content-between">
-            <ProductFilteringV1 />
+          {categories.length > 0 && (
+              <ProductFilteringV1
+                categories={categories}
+                handleFilter={handleFilter}
+              />
+            )}
           </div>
 
           <div className="products-wrapper mt-60 lg-mt-40">
             <div className="row gx-xl-5">
-              <ProductV1 />
+              <ProductV1 products={filteredProducts} />
             </div>
             <div className="page-pagination-one pt-45 lg-pt-30">
               <Pagination className="justify-content-center" />

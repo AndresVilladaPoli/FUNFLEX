@@ -35,7 +35,7 @@ const PortfolioV11Admin = () => {
         
           <div className="shop-page-header d-lg-flex align-items-center justify-content-between">
             
-            <ProductFilteringV1 />
+            {/* <ProductFilteringV1 /> */}
           </div>
 
           <div className="products-wrapper mt-60 lg-mt-40">

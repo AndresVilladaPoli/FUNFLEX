@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useProducts from "../../../../hooks/use-products";
 
-const ProductV1 = () => {
-  const { products } = useProducts();
-  const productItems = products.filter((prd) => prd.product_v1);
+
+
+const ProductV1 = ({ products }) => {
   return (
     <>
-      {productItems.map((item) => (
+      {products.map(item => (
         <div
           className="col-xl-4 col-md-6"
           data-aos="fade-up"
