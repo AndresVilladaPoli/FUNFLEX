@@ -2,15 +2,11 @@ import React from "react";
 import products from "../single-product/ProductsData";
 
 const ProductDescriptions = ({ productId }) => {
-  // Busca el producto correspondiente según el productId
-  const product = products.find((p) => p.id === productId);
+  const productIdNumber = parseInt(productId);
 
-  // Si no se encuentra el producto, mostrar un mensaje de error
-  if (!product) {
-    return <p>No se encontró el producto.</p>;
-  }
+  const product = products.find((p) => p.id === productIdNumber);
 
-  // Mostrar la descripción detallada y la información técnica
+
   return (
     <>
       <ul className="nav nav-tabs" role="tablist">

@@ -40,7 +40,7 @@ const DynamicProductDetails = () => {
           <SingleProduct product={product} />
 
           <div className="product-review-tab mt-150 lg-mt-100">
-            <ProductDescriptions />
+            <ProductDescriptions productId={id} /> 
           </div>
           <FeatureSection />
         </div>
