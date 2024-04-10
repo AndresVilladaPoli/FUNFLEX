@@ -67,7 +67,7 @@ const Header = ({ className = "" }) => {
             </div>
             <div className="d-none d-sm-block">
               <Link
-                to="/sign-in"
+                to="/login"
                 className="d-flex align-items-center login-btn"
               >
                 <img

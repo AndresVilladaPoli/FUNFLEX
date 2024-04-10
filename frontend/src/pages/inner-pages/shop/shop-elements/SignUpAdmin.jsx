@@ -44,7 +44,7 @@ const SignUp = () => {
               Hi future <span>Admin</span>, welcome <br /> Back!
             </h2>
             <p className="header-info pt-20 pb-50 lg-pb-30">
-              Have an account? Login <Link to="/sign-in"> here</Link>
+              Have an account? Login <Link to="/login"> here</Link>
             </p>
 
             <SignupForm />

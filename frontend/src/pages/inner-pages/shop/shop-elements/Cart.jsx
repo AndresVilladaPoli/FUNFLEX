@@ -41,7 +41,7 @@ const Cart = () => {
                 <div className="cart-total-section d-flex flex-column sm-pt-40">
                   <CartTotal />
                   <Link
-                    to="/sign-in"
+                    to="/login"
                     className="theme-btn-seven checkout-process mt-30"
                   >
                     BUY

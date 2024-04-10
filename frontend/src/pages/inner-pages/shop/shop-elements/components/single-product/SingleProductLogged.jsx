@@ -1,72 +1,30 @@
 import React from "react";
-import ItemContent from "./ItemContentLogged";
-
-import img1 from "../../../../../../assets/images/shop/image 9ps5 3.png";
-import img2 from "../../../../../../assets/images/shop/image 10ps5 1.png";
-import img3 from "../../../../../../assets/images/shop/image 11ps5 2.png";
+import ItemContent from "./ItemContent";
+import products from "./ProductsData";
 
 const SingleProduct = ({ product }) => {
-  const smallThumbContent = [
-    {
-      id: 1,
-      img: product.img,
-      isActive: "active",
-      itemTarget: "#img",
-      isSelected: false,
-    },
-    {
-      id: 2,
-      img: img1,
-      isActive: "",
-      itemTarget: "#img1",
-      isSelected: true,
-    },
-    {
-      id: 3,
-      img: img2,
-      isActive: "",
-      itemTarget: "#img2",
-      isSelected: false,
-    },
-    {
-      id: 4,
-      img: img3,
-      isActive: "",
-      itemTarget: "#img3",
-      isSelected: false,
-    },
-  ];
 
-  const largeThumbContent = [
-    {
-      id: 1,
-      img: product.img,
-      isActive: "show active",
-      itemTarget: "img",
-    },
-    {
-     id: 2,
-    img: img1,
-    isActive: "",
-    itemTarget: "img1",
-    },
-    {
-      id: 3,
-      img: img2,
-      isActive: "",
-      itemTarget: "img2",
-    },
-    {
-      id: 4,
-      img: img3,
-      isActive: "",
-      itemTarget: "img3",
-    },
-  ];
+  const { images, title, price, availability, description } = products.find(
+    (p) => p.id === product.id
+  );
+
+  const smallThumbContent = images.map((image, index) => ({
+    id: index,
+    img: image,
+    isActive: index === 0 ? "active" : "",
+    itemTarget: `#img${index}`,
+    isSelected: index === 0,
+  }));
+
+  const largeThumbContent = images.map((image, index) => ({
+    id: index,
+    img: image,
+    isActive: index === 0 ? "show active" : "",
+    itemTarget: `img${index}`,
+  }));
 
   return (
     <>
-      {" "}
       <div className="row">
         <div className="col-lg-5 order-lg-2">
           <div className="tab-content product-img-tab-content h-100">
@@ -108,16 +66,14 @@ const SingleProduct = ({ product }) => {
         <div className="col-lg-6 order-lg-3">
           <div className="product-info ps-xxl-5 md-mt-50">
             <div className="stock-tag">In Stock</div>
-            <h3 className="product-name">{product.title}</h3>
-            <div className="price">${product.price}</div>
-            <p className="availability">38 Piece Available </p>
-            <p className="description-text">
-            The PS5 Slim is a compact gaming console with a modern design, delivering powerful gaming experiences.            </p>
+            <h3 className="product-name">{title}</h3>
+            <div className="price">${price}</div>
+            <p className="availability">{availability} Piece Available </p>
+            <p className="description-text">{description}</p>
 
             <ItemContent product={product} />
           </div>
         </div>
-        {" "}
       </div>
     </>
   );

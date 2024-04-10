@@ -1,19 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { cartProduct } from "../../../../redux/features/cart-slice";
 import CartTotal from "./components/cart/CartTotal";
 import Clear from "./components/cart/ClearCart";
 import SingleCart from "./components/cart/SingleCart";
 import Seo from "../../../../components/common/seo/Seo";
 import HeaderLogged from "../../../../components/shop-standard/HeaderLogged";
-
+import { clear_cart, add_to_history } from "../../../../redux/features/cart-slice"; 
 
 const CartClient = () => {
   const cartItems = useSelector(cartProduct);
+  const dispatch = useDispatch(); 
+
   const handleClick = () => {
     alert('¡Realizaste tu compra con éxito!');
+    dispatch(add_to_history(cartItems)); // Agregar productos al historial de compras
+    dispatch(clear_cart()); // Vaciar el carrito después de la compra
   };
+
   return (
     <div className="main-page-wrapper">
       <Seo title="Cart" />

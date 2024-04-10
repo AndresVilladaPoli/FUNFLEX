@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import CopyrightFooter from "../../../../components/common/footer/CopyrightFooter";
 import Seo from "../../../../components/common/seo/Seo";
 import useProducts from "../../../../hooks/use-products";
-import Breadcrumb2 from "../components/Breadcrumb2Logged";
+import Breadcrumb2 from "../components/Breadcrumb2";
 import FeatureSection from "./components/FeatureSection";
 import ProductDescriptions from "./components/product-descriptions-tab/ProductDescriptions";
 import SingleProduct from "./components/single-product/SingleProductLogged";
@@ -40,7 +40,7 @@ const DynamicProductDetailsLogged = () => {
           <SingleProduct product={product} />
 
           <div className="product-review-tab mt-150 lg-mt-100">
-            <ProductDescriptions />
+            <ProductDescriptions productId={id} /> 
           </div>
           <FeatureSection />
         </div>
@@ -51,7 +51,7 @@ const DynamicProductDetailsLogged = () => {
           <div className="row">
             <div className="col-xl-3 col-lg-2 mb-40">
               <div className="logo">
-              <Link to="/client">
+              <Link to="/">
                   <img
                     src={
                       require("../../../../assets/images/logo/funflexblanco.png")
