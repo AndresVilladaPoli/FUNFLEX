@@ -51,11 +51,19 @@ And a customer service chat to resolve your doubts.
    ![Image text](README_IMG/LiveS.PNG)
    
    - Now, we must download MySQL Workbench to create our database
-	- Once we have established the localhost connection, we must create a database (Schema) called funflexdb
-	- the localhost user must be "root" (default user) and must not have a password
-
+	- We need to create a new connection, preferably called funflex and with the other default values
+	![Image text](README_IMG/Conection.PNG)
+	
+   - the localhost user must be "root" (default user) and must not have a password
+   - then, Inside the new connection, we must create a new Schema called funflexdb
 
 ![Image text](README_IMG/Schema.PNG)
+
+
+To initialize the 'backend' of the project, we need to go to the DemoApplication file (located in demo\src\main\java\funflex\demo) and run
+![Image text](README_IMG/DemoApplication.PNG)
+
+
 
 
 - Open the Git Bash console.
