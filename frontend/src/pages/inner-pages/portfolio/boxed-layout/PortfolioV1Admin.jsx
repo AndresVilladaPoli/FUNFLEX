@@ -3,7 +3,6 @@ import CopyrightFooter from "../../../../components/common/footer/CopyrightFoote
 import { Link } from "react-router-dom";
 import Pagination from "../../shop/components/Pagination";
 import Seo from "../../../../components/common/seo/Seo";
-import ProductFilteringV1 from "../../shop/components/ProductFilteringV1";
 import ProductV1 from "../../shop/components/ProductV1Admin";
 import HeaderAdmin from "../../../../components/shop-standard/HeaderAdmin";
 
@@ -20,7 +19,7 @@ const PortfolioV11Admin = () => {
               <h3 className="title page-title font-recoleta">Products</h3>
             </div>
           </div>
-          
+           
       </div>
       <div className="product-section-four mt-150 lg-mt-90">
       <div className="container" style={{marginRight:'0px'}}>
@@ -35,7 +34,6 @@ const PortfolioV11Admin = () => {
         
           <div className="shop-page-header d-lg-flex align-items-center justify-content-between">
             
-            {/* <ProductFilteringV1 /> */}
           </div>
 
           <div className="products-wrapper mt-60 lg-mt-40">

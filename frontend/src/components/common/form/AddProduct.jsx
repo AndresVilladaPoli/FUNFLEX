@@ -11,9 +11,9 @@ const Add = ({ formData, handleChange, handleSubmit }) => {
             <label>Name*</label>
             <input
               type="text"
-              name="name"
+              name="title"
               placeholder="Play Station"
-              value={formData.name}
+              value={formData.title}
               onChange={handleChange}
               required
             />
@@ -23,7 +23,7 @@ const Add = ({ formData, handleChange, handleSubmit }) => {
         <div className="col-12">
           <div className="input-group-meta mb-25">
             <label>Price*</label>
-            <input type="text" pattern="\$[0-9]*" name="price" value={formData.price} onChange={handleChange} placeholder="$0" required />
+            <input type="text" name="price" value={formData.price} onChange={handleChange} placeholder="$0" required />
           </div>
         </div>
 
@@ -41,21 +41,26 @@ const Add = ({ formData, handleChange, handleSubmit }) => {
           </div>
         </div>
 
-       < div className="col-12">
+       
+        < div className="col-12">
           <div className="input-group-meta mb-30">
-            <label>Product availability*</label>
+            <label>Category*</label>
             <div className="dropdown">
               <div className="custom-dropdown">
                 <select
                   className="form-control"
-                  name="availability" 
-                  value={formData.availability} 
+                  name="category" 
+                  value={formData.category} 
                   onChange={handleChange} 
                   required
                 >
                   <option value="">Select</option>
-                  <option value="instock">In stock</option>
-                  <option value="outofstock">Out of stock</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Consoles">Consoles</option>
+                  <option value="Videogames">Videogames</option>
+                  <option value="Music">Music</option>
+
+
                 </select>
                 <div className="arrow-down"></div>
               </div>
@@ -75,16 +80,7 @@ const Add = ({ formData, handleChange, handleSubmit }) => {
         </div>
 
         
-{/*          
-          <div className="upload-photo">
-            <input
-              type="file"
-              name="photo"
-              onChange={handleChange} 
-              required
-            />
-          </div> */}
-        
+
 
         <div className="col-12">
           <button type="submit" className="theme-btn-one w-100 mt-50 mb-50">ADD PRODUCT</button>

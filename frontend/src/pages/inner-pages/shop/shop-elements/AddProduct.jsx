@@ -1,23 +1,32 @@
+
 import React, { useState } from "react";
-import img1 from "../../../../assets/images/icon/add.svg";
+import { useNavigate } from "react-router-dom";
 import Add from "../../../../components/common/form/AddProduct";
-import Seo from "../../../../components/common/seo/Seo";
-import HeaderAdmin from "../../../../components/shop-standard/HeaderAdmin";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../../../redux/features/product-slice";
 
 const AddProduct = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    title: "",
     price: "",
     description: "",
     technicalinfo: "",
-    availability: "",
     quantity: 0,
+    category: "",
+    img:null
   });
   const [selectedFile, setSelectedFile] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleFileChange = (event) => {
     const file = event.target.files[0]; 
     setSelectedFile(file);
+  
+    setFormData({
+      ...formData,
+      img: URL.createObjectURL(file)
+    });
   };
 
   const handleChange = (event) => {
@@ -28,50 +37,41 @@ const AddProduct = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+ 
+  const addNewProduct = (event) => {
     event.preventDefault();
-    console.log("Form data:", formData);
-    console.log("Selected file:", selectedFile);
+    const newProductData = {
+      ...formData,
+      img: URL.createObjectURL(selectedFile) 
+    };
+    dispatch(addProduct(newProductData));
+    navigate("/admin");
   };
-
   return (
     <>
-      <Seo title="Add Product" />
-      <HeaderAdmin />
-
       <div className="user-data-page clearfix d-md-flex">
         <div className="illustration-wrapper d-none d-md-flex align-items-center justify-content-between flex-column">
           <div className="illustration-holderadd">
-            <img src={img1} alt="icon" className="add" />
-              <div className="edit-and-upload">
-                {/* <img
-                  src={require("../../../../assets/images/icon/edit.svg").default}
-                  alt="icon"
-                /> */}
-              
-                <div className="upload-photo">
-            <input
-              type="file"
-              name="photo"
-              onChange={handleChange} 
-              required
-            />
-          </div>
+            <div className="edit-and-upload">
+              <div className="upload-photo">
+                <input
+                  type="file"
+                  name="photo"
+                  onChange={handleFileChange} 
+                  required
+                />
               </div>
-           
-            
+            </div>
           </div>
         </div>
 
         <div className="form-wrapper">
-          
-
           <div className="user-data-form mt-80 lg-mt-50">
             <h2 className="font-recoleta">Add product</h2>
             <Add
               formData={formData}
               handleChange={handleChange}
-              handleSubmit={handleSubmit}
+              handleSubmit={addNewProduct}
             />
           </div>
         </div>

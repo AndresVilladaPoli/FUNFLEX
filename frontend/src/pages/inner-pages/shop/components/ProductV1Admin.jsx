@@ -1,17 +1,23 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useProducts from "../../../../hooks/use-products";
 
 const ProductV1 = () => {
   const { products, deleteProduct } = useProducts();
-  const productItems = products.filter((prd) => prd.product_v1);
- 
-  const handleDelete = (productId) => {
-    deleteProduct(productId); 
+  const [forceUpdate, setForceUpdate] = useState(false);
+
+  useEffect(() => {
+  
+  }, [forceUpdate]);
+
+  const handleForceUpdate = () => {
+    setForceUpdate((prev) => !prev);
   };
+
   return (
     <>
-      {productItems.map((item) => (
+      {products.map((item) => (
         <div
           className="col-xl-4 col-md-6"
           data-aos="fade-up"
@@ -20,10 +26,7 @@ const ProductV1 = () => {
         >
           <div className="product-block-two mb-60 xs-mb-40">
             <div className="img-holder">
-              <div
-                
-                className="d-flex align-items-center justify-content-center h-100"
-              >
+              <div className="d-flex align-items-center justify-content-center h-100">
                 <img
                   src={item.img}
                   alt="filtering product"
@@ -35,25 +38,29 @@ const ProductV1 = () => {
 
             <div className="product-meta">
               <div className="d-lg-flex align-items-center justify-content-between">
-                <div
-                  className="product-title"
-                >
-                  {item.title}
-                </div>
+                <div className="product-title">{item.title}</div>
               </div>
               <div className="price-and-icons-container">
-    <div className="price">${item.price} COP</div>
-    <div className="icon-container">
-        <Link to={`/edit-product/${item.id}`}> 
-            <img src={require("../../../../assets/images/icon/edit.svg").default} alt="icon" />
-        </Link>
- <span>  </span>
-
-        <Link onClick={() => handleDelete(item.id)} > 
-            <img src={require("../../../../assets/images/icon/trash.svg").default} alt="icon" />
-        </Link>
-    </div>
-</div>
+                <div className="price">${item.price} COP</div>
+                <div className="icon-container">
+                  <Link to={`/edit-product/${item.id}`}>
+                    <img
+                      src={require("../../../../assets/images/icon/edit.svg").default}
+                      alt="icon"
+                    />
+                  </Link>
+                  <span> </span>
+                  <Link onClick={() => {
+                    deleteProduct(item.id);
+                    handleForceUpdate(); 
+                  }}>
+                    <img
+                      src={require("../../../../assets/images/icon/trash.svg").default}
+                      alt="icon"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

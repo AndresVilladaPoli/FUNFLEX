@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [password, setPassword] = useState(false);
@@ -125,7 +126,7 @@ const Signup = () => {
     
 
         <div className="col-12">
-          <button className="theme-btn-one w-100 mt-50 mb-50">Sign Up</button>
+          <Link to="/admin"><button className="theme-btn-one w-100 mt-50 mb-50">Sign Up</button></Link>
         </div>
       </div>
     </form>
