@@ -3,17 +3,9 @@ import products from "../single-product/ProductsData";
 
 const ProductDescriptions = ({ productId }) => {
   const productIdNumber = parseInt(productId);
-
   const product = products.find((p) => p.id === productIdNumber);
-
-
-  // Verifica si se encontró el producto
- 
-
-  // Extrae la información del producto
   const { detailedDescription, technicalInfo } = product;
 
-  // Mostrar la descripción detallada y la información técnica
   return (
     <>
       <ul className="nav nav-tabs" role="tablist">

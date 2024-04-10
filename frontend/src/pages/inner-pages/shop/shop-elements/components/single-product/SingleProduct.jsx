@@ -4,7 +4,7 @@ import products from "./ProductsData";
 
 const SingleProduct = ({ product }) => {
 
-  const { images, title, price, availability, description } = products.find(
+  const { images, title, category, price, availability, description } = products.find(
     (p) => p.id === product.id
   );
 
@@ -67,6 +67,7 @@ const SingleProduct = ({ product }) => {
           <div className="product-info ps-xxl-5 md-mt-50">
             <div className="stock-tag">In Stock</div>
             <h3 className="product-name">{title}</h3>
+            <p className="availability">{category}</p>
             <div className="price">${price}</div>
             <p className="availability">{availability} Piece Available </p>
             <p className="description-text">{description}</p>
